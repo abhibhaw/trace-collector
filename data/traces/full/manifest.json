@@ -1,0 +1,811 @@
+{
+ "agents": {
+  "adk-academic-research": {
+   "bytes": 15433308,
+   "family": "google_adk",
+   "file": "google_adk/adk-academic-research.jsonl.gz",
+   "observations": 2905,
+   "sha256": "d124c2b182e3e463f5621e9cae39ebf3525d6c3f31f282da9f4abbd5c83d3224",
+   "traces": 103
+  },
+  "adk-brand-search-optimization": {
+   "bytes": 20664701,
+   "family": "google_adk",
+   "file": "google_adk/adk-brand-search-optimization.jsonl.gz",
+   "observations": 4499,
+   "sha256": "086f9dafba7c996c953d6a24217e24d12416d9e63023491fa6aaca488412bb48",
+   "traces": 101
+  },
+  "adk-customer-service": {
+   "bytes": 8180630,
+   "family": "google_adk",
+   "file": "google_adk/adk-customer-service.jsonl.gz",
+   "observations": 1826,
+   "sha256": "787907a221002ad4235230b7b9105e7d552c0206d4a529d63dc5af7290179f30",
+   "traces": 100
+  },
+  "adk-data-science": {
+   "bytes": 5181388,
+   "family": "google_adk",
+   "file": "google_adk/adk-data-science.jsonl.gz",
+   "observations": 1846,
+   "sha256": "e0c5920e6b7dc6bb5f04bc5ee11ff534762f4e718262e5c876bb29e2e0a04255",
+   "traces": 103
+  },
+  "adk-deep-search": {
+   "bytes": 36648397,
+   "family": "google_adk",
+   "file": "google_adk/adk-deep-search.jsonl.gz",
+   "observations": 6098,
+   "sha256": "f37d192f668e2155430b353640ee687dd2d0a205d097d211394fdce3195cdd5f",
+   "traces": 103
+  },
+  "adk-financial-advisor": {
+   "bytes": 41437605,
+   "family": "google_adk",
+   "file": "google_adk/adk-financial-advisor.jsonl.gz",
+   "observations": 5868,
+   "sha256": "5a0a84a886535a95b4101782965d9a3a9b6e8bd2c084633fc5114dc40fb320c6",
+   "traces": 107
+  },
+  "adk-llm-auditor": {
+   "bytes": 2650085,
+   "family": "google_adk",
+   "file": "google_adk/adk-llm-auditor.jsonl.gz",
+   "observations": 1099,
+   "sha256": "e62770299c123825f2c9af2851d963d7897bbe654c7866d4d736f4648cda3825",
+   "traces": 101
+  },
+  "adk-marketing-agency": {
+   "bytes": 14908704,
+   "family": "google_adk",
+   "file": "google_adk/adk-marketing-agency.jsonl.gz",
+   "observations": 4381,
+   "sha256": "c9382566c46686a363d1b965fa0929cbab0e4163874adcfcee8b65da960ad2da",
+   "traces": 101
+  },
+  "adk-software-bug-assistant": {
+   "bytes": 2427239,
+   "family": "google_adk",
+   "file": "google_adk/adk-software-bug-assistant.jsonl.gz",
+   "observations": 1207,
+   "sha256": "b4b05648e5c6d9988e79d8c340665cfd66668c31c32ec805664d5f14a55ef93f",
+   "traces": 100
+  },
+  "adk-travel-concierge": {
+   "bytes": 13005471,
+   "family": "google_adk",
+   "file": "google_adk/adk-travel-concierge.jsonl.gz",
+   "observations": 3960,
+   "sha256": "7a2e52881002b6037aff97f3bad80709c1b7d4ccc0227319837ead4d3d640acb",
+   "traces": 109
+  },
+  "ag-code-exec-team": {
+   "bytes": 4643414,
+   "family": "autogen_agno",
+   "file": "autogen_agno/ag-code-exec-team.jsonl.gz",
+   "observations": 1374,
+   "sha256": "273143f307abd55fb5a1513a146c7ef48ded4cc128ac322de5821a8f88933aad",
+   "traces": 100
+  },
+  "ag-magentic-research": {
+   "bytes": 17760262,
+   "family": "autogen_agno",
+   "file": "autogen_agno/ag-magentic-research.jsonl.gz",
+   "observations": 3278,
+   "sha256": "9df8acca0371d7cd2db8a1dedc7a8947311d16dcdf3236f27e948c9dd8d294a8",
+   "traces": 101
+  },
+  "ag-support-swarm": {
+   "bytes": 2532256,
+   "family": "autogen_agno",
+   "file": "autogen_agno/ag-support-swarm.jsonl.gz",
+   "observations": 2527,
+   "sha256": "897cfb0fb3c6d049601b5895306be810178d09e2e2431f6c652b5cf34294adf3",
+   "traces": 100
+  },
+  "ag-travel-planner": {
+   "bytes": 11981518,
+   "family": "autogen_agno",
+   "file": "autogen_agno/ag-travel-planner.jsonl.gz",
+   "observations": 4159,
+   "sha256": "445748070717d72c19f4130107048d29aed71490610fa0c2246d9d473c74beab",
+   "traces": 100
+  },
+  "ag-writer-critic": {
+   "bytes": 3401183,
+   "family": "autogen_agno",
+   "file": "autogen_agno/ag-writer-critic.jsonl.gz",
+   "observations": 1699,
+   "sha256": "53ba04698d563394622953f876472181248f3daa8ae858799ce4aff60e7be3c5",
+   "traces": 100
+  },
+  "agno-agentic-rag": {
+   "bytes": 476513,
+   "family": "autogen_agno",
+   "file": "autogen_agno/agno-agentic-rag.jsonl.gz",
+   "observations": 866,
+   "sha256": "debade920c76e9b6f676d6c62c76e85921d8a3bf3c6a6075b743039283a7adbf",
+   "traces": 100
+  },
+  "agno-finance-agent": {
+   "bytes": 1085124,
+   "family": "autogen_agno",
+   "file": "autogen_agno/agno-finance-agent.jsonl.gz",
+   "observations": 585,
+   "sha256": "310a5de673fcf4e56e3eb107292adb027e3eac7d69804e5df3701eec62841a12",
+   "traces": 103
+  },
+  "agno-investment-workflow": {
+   "bytes": 2758034,
+   "family": "autogen_agno",
+   "file": "autogen_agno/agno-investment-workflow.jsonl.gz",
+   "observations": 2890,
+   "sha256": "25dd43a8e8df2bdce58325738bc35fe2000ed5e16988683072aad2fe9578babd",
+   "traces": 101
+  },
+  "agno-reasoning-agent": {
+   "bytes": 900886,
+   "family": "autogen_agno",
+   "file": "autogen_agno/agno-reasoning-agent.jsonl.gz",
+   "observations": 831,
+   "sha256": "aa74357ed454dbb312a55eb29318a4a4f66dd28d4ceecf4b66637c4dcd4d0bb1",
+   "traces": 100
+  },
+  "agno-research-team": {
+   "bytes": 4061385,
+   "family": "autogen_agno",
+   "file": "autogen_agno/agno-research-team.jsonl.gz",
+   "observations": 1178,
+   "sha256": "8fc097b89b46d9477ae797e089fc0ed884dba496b1f4817db7eb26c69dd27621",
+   "traces": 100
+  },
+  "crew-book-flow": {
+   "bytes": 15415444,
+   "family": "crewai",
+   "file": "crewai/crew-book-flow.jsonl.gz",
+   "observations": 6610,
+   "sha256": "32f1fde4640de37192df40cc1da3dcbdb0f1dc56c40aca9f86dcd999a2e1ba57",
+   "traces": 100
+  },
+  "crew-email-responder-flow": {
+   "bytes": 1644019,
+   "family": "crewai",
+   "file": "crewai/crew-email-responder-flow.jsonl.gz",
+   "observations": 2775,
+   "sha256": "78b152c697cc0baf0fc6a6aaf2cc07671cb0d4cda51fd39870455e8a49e81241",
+   "traces": 100
+  },
+  "crew-game-builder": {
+   "bytes": 2327823,
+   "family": "crewai",
+   "file": "crewai/crew-game-builder.jsonl.gz",
+   "observations": 1756,
+   "sha256": "78cb4e9910d97b7a9f5b0158cf955358724f7b9bd06273b48be8a57e51326b5e",
+   "traces": 102
+  },
+  "crew-instagram-post": {
+   "bytes": 10362213,
+   "family": "crewai",
+   "file": "crewai/crew-instagram-post.jsonl.gz",
+   "observations": 4460,
+   "sha256": "5be916280474fac05553f0152299c54de3c3297f40536301872de30b77adc378",
+   "traces": 100
+  },
+  "crew-job-posting": {
+   "bytes": 4941521,
+   "family": "crewai",
+   "file": "crewai/crew-job-posting.jsonl.gz",
+   "observations": 3966,
+   "sha256": "45800f7cac99019f2eee9fd0d85a8fbab51b13845d9eac7f244857e25219743b",
+   "traces": 100
+  },
+  "crew-lead-score-flow": {
+   "bytes": 2700448,
+   "family": "crewai",
+   "file": "crewai/crew-lead-score-flow.jsonl.gz",
+   "observations": 4766,
+   "sha256": "de807717ac8ee441659548013c9f9ac34f32511d1443a9f2f76809eda7bbe11d",
+   "traces": 100
+  },
+  "crew-marketing-strategy": {
+   "bytes": 5125368,
+   "family": "crewai",
+   "file": "crewai/crew-marketing-strategy.jsonl.gz",
+   "observations": 3165,
+   "sha256": "eb1c7e6c23bb7ef808d4c002a8099e812e2ec09b2b128a2ddd5565565aa28850",
+   "traces": 100
+  },
+  "crew-meeting-prep": {
+   "bytes": 9338552,
+   "family": "crewai",
+   "file": "crewai/crew-meeting-prep.jsonl.gz",
+   "observations": 3982,
+   "sha256": "28456117bd8d989fc0234bec25e8935485c315e1541f8a95e7ffa1f6b4d30de7",
+   "traces": 100
+  },
+  "crew-stock-analysis": {
+   "bytes": 21967339,
+   "family": "crewai",
+   "file": "crewai/crew-stock-analysis.jsonl.gz",
+   "observations": 6147,
+   "sha256": "2a1d55d023e10d00b5505bf12476a32b5ce3a54d64fba17a6819984a700ed80c",
+   "traces": 101
+  },
+  "crew-surprise-trip": {
+   "bytes": 9842018,
+   "family": "crewai",
+   "file": "crewai/crew-surprise-trip.jsonl.gz",
+   "observations": 3610,
+   "sha256": "96834fdfe2010e91dbdfc543a77ea79efe8176ed5c9d3a60a140996f8b8384ff",
+   "traces": 100
+  },
+  "da-arxiv-review": {
+   "bytes": 21303917,
+   "family": "deepagents",
+   "file": "deepagents/da-arxiv-review.jsonl.gz",
+   "observations": 8938,
+   "sha256": "422d8989a51dd974aab61f08bf718c5c7603c12a0ac61f5d8fdb04d71f5b41ac",
+   "traces": 120
+  },
+  "da-coding-agent": {
+   "bytes": 113766116,
+   "family": "deepagents",
+   "file": "deepagents/da-coding-agent.jsonl.gz",
+   "observations": 10529,
+   "sha256": "f3cb7f8532ea082b4d33520502036742bab961fcad09c5940e325d273172dd61",
+   "traces": 111
+  },
+  "da-content-builder": {
+   "bytes": 115726825,
+   "family": "deepagents",
+   "file": "deepagents/da-content-builder.jsonl.gz",
+   "observations": 15038,
+   "sha256": "06cef699d356a48ba33bb30bbc537d9ab128e6f874d62568e8826d4b1ac22cdd",
+   "traces": 111
+  },
+  "da-deep-research": {
+   "bytes": 74334849,
+   "family": "deepagents",
+   "file": "deepagents/da-deep-research.jsonl.gz",
+   "observations": 13914,
+   "sha256": "641a2b443341e6c97d8f34a57c90aff103b7d52b7509d4e0eeb638f9a63308c6",
+   "traces": 102
+  },
+  "da-gtm-strategist": {
+   "bytes": 81384911,
+   "family": "deepagents",
+   "file": "deepagents/da-gtm-strategist.jsonl.gz",
+   "observations": 14888,
+   "sha256": "0dba612f82e0c377ff78f73cd2d74aa762fda996046f3149e958551c09d473fd",
+   "traces": 107
+  },
+  "da-nvidia-analyst": {
+   "bytes": 223474630,
+   "family": "deepagents",
+   "file": "deepagents/da-nvidia-analyst.jsonl.gz",
+   "observations": 18174,
+   "sha256": "3ecd4522a929bf976e4525045f69d7e6a31eb176bec254796994d2aec786f748",
+   "traces": 115
+  },
+  "da-ralph-triage": {
+   "bytes": 39172268,
+   "family": "deepagents",
+   "file": "deepagents/da-ralph-triage.jsonl.gz",
+   "observations": 12092,
+   "sha256": "61f33bcc76400a10a8461581b4fc3ed747b9fdc37d85e0e12e5bb982e81c2867",
+   "traces": 103
+  },
+  "da-rubric-postmortem": {
+   "bytes": 95418948,
+   "family": "deepagents",
+   "file": "deepagents/da-rubric-postmortem.jsonl.gz",
+   "observations": 11513,
+   "sha256": "1e9e33267461089ce33639fbdd57859df5ff36a38229c2b760dedf54eccc3b74",
+   "traces": 100
+  },
+  "da-text-to-sql": {
+   "bytes": 6891232,
+   "family": "deepagents",
+   "file": "deepagents/da-text-to-sql.jsonl.gz",
+   "observations": 2868,
+   "sha256": "1704a99f805526d7fc803669705e413348bd2cb538d68b8c4c45506457482c4a",
+   "traces": 100
+  },
+  "da-travel-planner": {
+   "bytes": 15277779,
+   "family": "deepagents",
+   "file": "deepagents/da-travel-planner.jsonl.gz",
+   "observations": 6538,
+   "sha256": "0ab004a39dbb47b1b20e338523e0443f59b66dae2c321c1750a60458b8792abc",
+   "traces": 100
+  },
+  "dspy-airline-cs-react": {
+   "bytes": 944043,
+   "family": "dspy_strands_haystack",
+   "file": "dspy_strands_haystack/dspy-airline-cs-react.jsonl.gz",
+   "observations": 1916,
+   "sha256": "3dd6fede35b3973dbf328b3e4c9adb96d496b25b98cb041b7f3f39d3637404dd",
+   "traces": 100
+  },
+  "dspy-math-rlm": {
+   "bytes": 589948,
+   "family": "dspy_strands_haystack",
+   "file": "dspy_strands_haystack/dspy-math-rlm.jsonl.gz",
+   "observations": 1171,
+   "sha256": "dbe5378ded515e71c835d1e89e10483ed9f481ca0eadbaf633dfc20b03fab1e9",
+   "traces": 100
+  },
+  "dspy-multihop-rag": {
+   "bytes": 628611,
+   "family": "dspy_strands_haystack",
+   "file": "dspy_strands_haystack/dspy-multihop-rag.jsonl.gz",
+   "observations": 3562,
+   "sha256": "288a69b07f4f478c35b78cab6ae9215275162d665cef0a672140d900d71f8ed2",
+   "traces": 100
+  },
+  "dspy-wiki-react": {
+   "bytes": 1242951,
+   "family": "dspy_strands_haystack",
+   "file": "dspy_strands_haystack/dspy-wiki-react.jsonl.gz",
+   "observations": 1960,
+   "sha256": "bbef3f1e8b28cf9fb8fa85a575682c8eebacc55a987faa9d9d785389d8ded46c",
+   "traces": 100
+  },
+  "hay-acme-swarm": {
+   "bytes": 709641,
+   "family": "dspy_strands_haystack",
+   "file": "dspy_strands_haystack/hay-acme-swarm.jsonl.gz",
+   "observations": 1588,
+   "sha256": "f5b4a1f4025e16540423e7619004d16f669fe8564e68dc0cccda9661f92836eb",
+   "traces": 100
+  },
+  "hay-fallback-rag": {
+   "bytes": 693823,
+   "family": "dspy_strands_haystack",
+   "file": "dspy_strands_haystack/hay-fallback-rag.jsonl.gz",
+   "observations": 885,
+   "sha256": "d68ecd6c1ade3c9b07b4b686130d68284618d6faa29a7454068f53068bddb6f8",
+   "traces": 100
+  },
+  "hay-ticket-resolver": {
+   "bytes": 2683942,
+   "family": "dspy_strands_haystack",
+   "file": "dspy_strands_haystack/hay-ticket-resolver.jsonl.gz",
+   "observations": 1766,
+   "sha256": "3f8c98150294412063b867ee903e8e96b51cc8f6960f212b99492631be4fa172",
+   "traces": 100
+  },
+  "lg-adaptive-rag": {
+   "bytes": 1074567,
+   "family": "langgraph",
+   "file": "langgraph/lg-adaptive-rag.jsonl.gz",
+   "observations": 5762,
+   "sha256": "e64892581dd41e78eb2152d02e881113bbb7f2b6d278ffcf43a14f7f7f7dfce3",
+   "traces": 100
+  },
+  "lg-data-enrichment": {
+   "bytes": 9895330,
+   "family": "langgraph",
+   "file": "langgraph/lg-data-enrichment.jsonl.gz",
+   "observations": 4893,
+   "sha256": "68e9336b58fd0181b0e7dd0e00e0ad520ae3f78f5ddf7aa9f848b2d0f2dd640c",
+   "traces": 101
+  },
+  "lg-open-deep-research": {
+   "bytes": 50194706,
+   "family": "langgraph",
+   "file": "langgraph/lg-open-deep-research.jsonl.gz",
+   "observations": 6396,
+   "sha256": "efde1cbe68e6edf7a0385cf6331c1b01a7a784e34671ba650f922c373801cd2d",
+   "traces": 100
+  },
+  "lg-plan-execute": {
+   "bytes": 15596862,
+   "family": "langgraph",
+   "file": "langgraph/lg-plan-execute.jsonl.gz",
+   "observations": 8544,
+   "sha256": "447bd17f62570891439d403e4abf2ee2584f04d8d745fee97348edc74fcd0957",
+   "traces": 100
+  },
+  "lg-react-assistant": {
+   "bytes": 1982878,
+   "family": "langgraph",
+   "file": "langgraph/lg-react-assistant.jsonl.gz",
+   "observations": 1367,
+   "sha256": "901b10d4b3fb778c7d4aab834ac6a521e506f481d4a181cbb4430feb65f679cc",
+   "traces": 100
+  },
+  "lg-reflexion-writer": {
+   "bytes": 4457815,
+   "family": "langgraph",
+   "file": "langgraph/lg-reflexion-writer.jsonl.gz",
+   "observations": 3336,
+   "sha256": "2834123cfe623ce4a86ce7f7df17cfe696d476652e23f66c1ed7638c1248acab",
+   "traces": 100
+  },
+  "lg-sql-analyst": {
+   "bytes": 987232,
+   "family": "langgraph",
+   "file": "langgraph/lg-sql-analyst.jsonl.gz",
+   "observations": 1953,
+   "sha256": "726ce8eb5c10cfb23b2a53b014f36e12fa23b5e8cc2d5ef7248f62a3b98e0a32",
+   "traces": 100
+  },
+  "lg-supervisor-team": {
+   "bytes": 21322579,
+   "family": "langgraph",
+   "file": "langgraph/lg-supervisor-team.jsonl.gz",
+   "observations": 5966,
+   "sha256": "e374d9f15155542a21866a51d2ddb47dfca476af47cd4ebc7210a2d152b4ab83",
+   "traces": 100
+  },
+  "lg-swarm-support": {
+   "bytes": 1889646,
+   "family": "langgraph",
+   "file": "langgraph/lg-swarm-support.jsonl.gz",
+   "observations": 2340,
+   "sha256": "8d8e1dda477826b757086225c4bf2d6a3ed4f66e15ec8169ef556424549b6e6d",
+   "traces": 100
+  },
+  "lg-travel-support": {
+   "bytes": 24061021,
+   "family": "langgraph",
+   "file": "langgraph/lg-travel-support.jsonl.gz",
+   "observations": 6269,
+   "sha256": "e489476555341d49a186a257f619c3d8a9ad3641418a9213aafa6bb01bb35612",
+   "traces": 109
+  },
+  "li-crag-workflow": {
+   "bytes": 752340,
+   "family": "pydantic_llamaindex",
+   "file": "pydantic_llamaindex/li-crag-workflow.jsonl.gz",
+   "observations": 3128,
+   "sha256": "e4e3e971b59e47df7adb190e851f1051caa42df87562b949e8f789b06bf4ec30",
+   "traces": 101
+  },
+  "li-react-researcher": {
+   "bytes": 2172872,
+   "family": "pydantic_llamaindex",
+   "file": "pydantic_llamaindex/li-react-researcher.jsonl.gz",
+   "observations": 2824,
+   "sha256": "1a558fe7d342276a1adadd503e679edcf379b91f3ba79b36a4642e06a6fd63de",
+   "traces": 102
+  },
+  "li-research-report": {
+   "bytes": 12250524,
+   "family": "pydantic_llamaindex",
+   "file": "pydantic_llamaindex/li-research-report.jsonl.gz",
+   "observations": 6920,
+   "sha256": "dcca86f0294391dc02f0aeb2df2ef2bb2912b5a89dc47f233bfb350d18190d93",
+   "traces": 100
+  },
+  "li-router-qe": {
+   "bytes": 567732,
+   "family": "pydantic_llamaindex",
+   "file": "pydantic_llamaindex/li-router-qe.jsonl.gz",
+   "observations": 2399,
+   "sha256": "e796eece9904cb0afb553c8ab61811bca74b2763207cbdcbfbdda18cd7870813",
+   "traces": 100
+  },
+  "li-store-assistant": {
+   "bytes": 1071215,
+   "family": "pydantic_llamaindex",
+   "file": "pydantic_llamaindex/li-store-assistant.jsonl.gz",
+   "observations": 2329,
+   "sha256": "9b3975493a79b591fc101c00b64c567f133e4da89f28301916571bb70b3f48d5",
+   "traces": 100
+  },
+  "oai-airline-service": {
+   "bytes": 504130,
+   "family": "openai_agents",
+   "file": "openai_agents/oai-airline-service.jsonl.gz",
+   "observations": 1673,
+   "sha256": "936a562c08189d3e112242ea80b66de91259b07a6bc304f0692a26b743204973",
+   "traces": 100
+  },
+  "oai-content-pipeline": {
+   "bytes": 1192895,
+   "family": "openai_agents",
+   "file": "openai_agents/oai-content-pipeline.jsonl.gz",
+   "observations": 1786,
+   "sha256": "cb4e04d857cd108c5554f0d4f36bc5481728c4e7d5db4e289ec4d882da054693",
+   "traces": 100
+  },
+  "oai-financial-research": {
+   "bytes": 4445569,
+   "family": "openai_agents",
+   "file": "openai_agents/oai-financial-research.jsonl.gz",
+   "observations": 5793,
+   "sha256": "fe17f073f1ba9e9a0dced39ef05604085d503adb5991c7361100d7cbb57e1662",
+   "traces": 100
+  },
+  "oai-judge-loop": {
+   "bytes": 2004249,
+   "family": "openai_agents",
+   "file": "openai_agents/oai-judge-loop.jsonl.gz",
+   "observations": 2592,
+   "sha256": "aeb06a7cb7a9ef8926129864ca7308fb48e43de59195ea65fd875211bded8106",
+   "traces": 101
+  },
+  "oai-memory-concierge": {
+   "bytes": 537643,
+   "family": "openai_agents",
+   "file": "openai_agents/oai-memory-concierge.jsonl.gz",
+   "observations": 1723,
+   "sha256": "0b4c0e8f8bb11f3d975811c7d855a9cd689be56d08845ed1be77a88a727a042f",
+   "traces": 100
+  },
+  "oai-parallel-sql": {
+   "bytes": 2371073,
+   "family": "openai_agents",
+   "file": "openai_agents/oai-parallel-sql.jsonl.gz",
+   "observations": 3558,
+   "sha256": "f60a2c25aeeb261cdc7d007ce5944f41a124348c545bc846ad9d07375aac9511",
+   "traces": 100
+  },
+  "oai-quote-forced-tool": {
+   "bytes": 113063,
+   "family": "openai_agents",
+   "file": "openai_agents/oai-quote-forced-tool.jsonl.gz",
+   "observations": 808,
+   "sha256": "f6e3ff9337d4c6eaa269a488f9f8bfc803deff407f57a363af120763cbc0bb21",
+   "traces": 100
+  },
+  "oai-research-bot": {
+   "bytes": 4297142,
+   "family": "openai_agents",
+   "file": "openai_agents/oai-research-bot.jsonl.gz",
+   "observations": 5425,
+   "sha256": "73d3f27ba5f6bbe3862e082a331bf0112f72fe79a6038e28781d5bfa9689dc40",
+   "traces": 100
+  },
+  "oai-support-guardrails": {
+   "bytes": 662784,
+   "family": "openai_agents",
+   "file": "openai_agents/oai-support-guardrails.jsonl.gz",
+   "observations": 1869,
+   "sha256": "d12b13ad1861db02f8e567aae1b091763369eaf72c03a325e5b3182354cfbaee",
+   "traces": 100
+  },
+  "oai-translation-desk": {
+   "bytes": 746849,
+   "family": "openai_agents",
+   "file": "openai_agents/oai-translation-desk.jsonl.gz",
+   "observations": 2353,
+   "sha256": "67d9f21a019c4ac2bd38b0115174e295adc95d07a4c4ea2b334deda9765bd6fd",
+   "traces": 100
+  },
+  "pyd-bank-support": {
+   "bytes": 304089,
+   "family": "pydantic_llamaindex",
+   "file": "pydantic_llamaindex/pyd-bank-support.jsonl.gz",
+   "observations": 653,
+   "sha256": "995fd43d096197ef83c3dd333d3b61c3f7a8a4228264fe906bffb3c059d4e666",
+   "traces": 100
+  },
+  "pyd-flight-booking": {
+   "bytes": 347730,
+   "family": "pydantic_llamaindex",
+   "file": "pydantic_llamaindex/pyd-flight-booking.jsonl.gz",
+   "observations": 1100,
+   "sha256": "fee194bdea1a29a14544fff954277aa8e4031b70137da9d5d1841c93c49facf3",
+   "traces": 108
+  },
+  "pyd-question-graph": {
+   "bytes": 598371,
+   "family": "pydantic_llamaindex",
+   "file": "pydantic_llamaindex/pyd-question-graph.jsonl.gz",
+   "observations": 1538,
+   "sha256": "b5ae9c5b04639517238e5c9e66fd21ab4cb3e75d78d6362e229b3253a888fb66",
+   "traces": 100
+  },
+  "pyd-sql-gen": {
+   "bytes": 245407,
+   "family": "pydantic_llamaindex",
+   "file": "pydantic_llamaindex/pyd-sql-gen.jsonl.gz",
+   "observations": 478,
+   "sha256": "1397ce38ca0c3ee62e01a53599366b23317e767d42d52783da4bd09d18db0d3c",
+   "traces": 100
+  },
+  "pyd-support-triage": {
+   "bytes": 1908547,
+   "family": "pydantic_llamaindex",
+   "file": "pydantic_llamaindex/pyd-support-triage.jsonl.gz",
+   "observations": 1810,
+   "sha256": "1764fe730ac2e6782653ae49ee68987f94a0982c75ea3d57e58712f84c9a0bab",
+   "traces": 100
+  },
+  "raw-cs-manual-loop": {
+   "bytes": 868735,
+   "family": "raw_loops",
+   "file": "raw_loops/raw-cs-manual-loop.jsonl.gz",
+   "observations": 1244,
+   "sha256": "b2d529369706c04859710e06274e250f988c83cab0efa01f610e52a5644560d9",
+   "traces": 100
+  },
+  "raw-debate-reasoning": {
+   "bytes": 211523,
+   "family": "raw_loops",
+   "file": "raw_loops/raw-debate-reasoning.jsonl.gz",
+   "observations": 1700,
+   "sha256": "6b9339dc0a7328f77183fa377bfde744c7cfa4a6a081561c6d31482c63adee1f",
+   "traces": 100
+  },
+  "raw-eval-optimizer-email": {
+   "bytes": 2510598,
+   "family": "raw_loops",
+   "file": "raw_loops/raw-eval-optimizer-email.jsonl.gz",
+   "observations": 2492,
+   "sha256": "12b8b3dc7d4c450d5a60af1bbd1511ff3f3fed78929c6aebf45bc761775cbfdf",
+   "traces": 100
+  },
+  "raw-parallel-stock-brief": {
+   "bytes": 4707980,
+   "family": "raw_loops",
+   "file": "raw_loops/raw-parallel-stock-brief.jsonl.gz",
+   "observations": 4123,
+   "sha256": "c31c95855580cb80c2f32af7ad5f7a07863afe93bee5c9f14f728a24a5592769",
+   "traces": 100
+  },
+  "raw-react-wiki": {
+   "bytes": 234453,
+   "family": "raw_loops",
+   "file": "raw_loops/raw-react-wiki.jsonl.gz",
+   "observations": 1340,
+   "sha256": "27eeae138e708670a1f924c9e0a5843580de7809599275f46f7e5eec859dcca7",
+   "traces": 103
+  },
+  "raw-reflexion-coder": {
+   "bytes": 191337,
+   "family": "raw_loops",
+   "file": "raw_loops/raw-reflexion-coder.jsonl.gz",
+   "observations": 678,
+   "sha256": "24aee10e778893b6573a13e3e2492d6846a7577e9f416d1103b70d2b49471785",
+   "traces": 100
+  },
+  "raw-research-orchestrator": {
+   "bytes": 14015650,
+   "family": "raw_loops",
+   "file": "raw_loops/raw-research-orchestrator.jsonl.gz",
+   "observations": 6049,
+   "sha256": "88da4e28d53fdb109b97e9e4a7b442e0eebd88a4298f4f8eb6b98f122d123754",
+   "traces": 100
+  },
+  "raw-sql-tool-runner": {
+   "bytes": 867275,
+   "family": "raw_loops",
+   "file": "raw_loops/raw-sql-tool-runner.jsonl.gz",
+   "observations": 758,
+   "sha256": "b4a536b20198195dafa4597f7b028d9fb1c104139e4282e73fea4246295b5034",
+   "traces": 100
+  },
+  "raw-support-router": {
+   "bytes": 714628,
+   "family": "raw_loops",
+   "file": "raw_loops/raw-support-router.jsonl.gz",
+   "observations": 1249,
+   "sha256": "fcb80b5a9a432c0376b5da78023e4ed3f1d48cfbb572aebf98f2301938c8bc40",
+   "traces": 100
+  },
+  "raw-tot-number-puzzle": {
+   "bytes": 1700113,
+   "family": "raw_loops",
+   "file": "raw_loops/raw-tot-number-puzzle.jsonl.gz",
+   "observations": 2471,
+   "sha256": "6cd0a642411a402ae221509511c6e9985a4f877c4f3084dedb9400db7d1b4d9f",
+   "traces": 100
+  },
+  "smol-agentic-rag": {
+   "bytes": 1108009,
+   "family": "smolagents",
+   "file": "smolagents/smol-agentic-rag.jsonl.gz",
+   "observations": 1184,
+   "sha256": "7b455f03d983c5f776c9ee08e2d9d3ec9d5b1f63d16463ff08abea2da9f68fa0",
+   "traces": 100
+  },
+  "smol-data-analyst": {
+   "bytes": 2213245,
+   "family": "smolagents",
+   "file": "smolagents/smol-data-analyst.jsonl.gz",
+   "observations": 1923,
+   "sha256": "e0328dce5ac565aa8cb159243baac80345126180055c678f7812440a81db25e1",
+   "traces": 100
+  },
+  "smol-gaia-generalist": {
+   "bytes": 2700261,
+   "family": "smolagents",
+   "file": "smolagents/smol-gaia-generalist.jsonl.gz",
+   "observations": 1365,
+   "sha256": "c7985a6a28b1ad59b93a8930b632a95a2948fec274bc5b28ac8d701afdbf7a78",
+   "traces": 100
+  },
+  "smol-math-solver": {
+   "bytes": 378778,
+   "family": "smolagents",
+   "file": "smolagents/smol-math-solver.jsonl.gz",
+   "observations": 762,
+   "sha256": "a206947a837e1789a8ea45f61d473dad7f49a0666b384f0b20cd9cde19ef7c43",
+   "traces": 100
+  },
+  "smol-open-deep-research": {
+   "bytes": 12902767,
+   "family": "smolagents",
+   "file": "smolagents/smol-open-deep-research.jsonl.gz",
+   "observations": 2825,
+   "sha256": "7f298a1711ac882ffcb24d3a8531f70a3e11e6cefb83175fa48038c4bd58828c",
+   "traces": 100
+  },
+  "smol-ops-multiagent": {
+   "bytes": 10714581,
+   "family": "smolagents",
+   "file": "smolagents/smol-ops-multiagent.jsonl.gz",
+   "observations": 2976,
+   "sha256": "cd2f4b8dd39fcb4ce3eafb32f599774575293c9de66cca84d46149a9c8f7c911",
+   "traces": 100
+  },
+  "smol-plan-review": {
+   "bytes": 5548689,
+   "family": "smolagents",
+   "file": "smolagents/smol-plan-review.jsonl.gz",
+   "observations": 1776,
+   "sha256": "4a5ee85303856ff56889f1d85a2131707730c4b3094ff40e10b08658e0cb3647",
+   "traces": 100
+  },
+  "smol-text-to-sql": {
+   "bytes": 1451317,
+   "family": "smolagents",
+   "file": "smolagents/smol-text-to-sql.jsonl.gz",
+   "observations": 900,
+   "sha256": "1971df2367e5e253924c8f44b998c5beda78a96ac597b069c4019f11cc264253",
+   "traces": 100
+  },
+  "smol-travel-planner": {
+   "bytes": 1300121,
+   "family": "smolagents",
+   "file": "smolagents/smol-travel-planner.jsonl.gz",
+   "observations": 960,
+   "sha256": "9aec0d41b0d9058c8a407841ee014d80bb9d38590352adfd19b140baf7a775ff",
+   "traces": 100
+  },
+  "smol-web-multiagent": {
+   "bytes": 4299733,
+   "family": "smolagents",
+   "file": "smolagents/smol-web-multiagent.jsonl.gz",
+   "observations": 2024,
+   "sha256": "a4ac9c6b552abc540e2197bc8e68fe13bb035c53c459ba2246703bf84528f83e",
+   "traces": 100
+  },
+  "str-agents-as-tools": {
+   "bytes": 4114883,
+   "family": "dspy_strands_haystack",
+   "file": "dspy_strands_haystack/str-agents-as-tools.jsonl.gz",
+   "observations": 2351,
+   "sha256": "5715d3377fdfdd416308b6bd53e30db3ce21d8f64e5013ad36c5c3477a307093",
+   "traces": 100
+  },
+  "str-finance-swarm": {
+   "bytes": 1754262,
+   "family": "dspy_strands_haystack",
+   "file": "dspy_strands_haystack/str-finance-swarm.jsonl.gz",
+   "observations": 2956,
+   "sha256": "430cc603fa6597ffd268d99179ef9b69983cf97b4abbd72f12d5c8ab724279d5",
+   "traces": 100
+  },
+  "str-graph-workflow": {
+   "bytes": 1652243,
+   "family": "dspy_strands_haystack",
+   "file": "dspy_strands_haystack/str-graph-workflow.jsonl.gz",
+   "observations": 1916,
+   "sha256": "c2aa45f1663a511bbf25d9dc90121531cd3b4cea7df1a2b7123845ea86070722",
+   "traces": 100
+  }
+ },
+ "batch": "full",
+ "totals": {
+  "agents": 100,
+  "bytes": 1332765323,
+  "observations": 365260,
+  "traces": 10130
+ }
+}
