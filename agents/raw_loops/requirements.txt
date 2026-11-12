@@ -1,0 +1,4 @@
+anthropic==2.8.0
+litellm==1.109.1
+openinference-instrumentation-anthropic==3.3.4
+openinference-instrumentation-litellm==0.1.57

@@ -1,0 +1,12 @@
+# google_adk family. Install with:
+#   uv pip install -p agents/google_adk/.venv -r agents/google_adk/requirements.txt -e harness
+google-adk==2.14.0
+google-genai==2.34.0
+anthropic==2.8.0
+openinference-instrumentation==0.1.77
+openinference-instrumentation-google-adk==1.1.5
+opentelemetry-api==1.45.2
+opentelemetry-sdk==1.45.2
+langfuse==5.2.0
+httpx==0.28.1
+pydantic==2.14.3

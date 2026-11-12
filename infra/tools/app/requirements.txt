@@ -1,0 +1,136 @@
+# Pinned for linux/arm64, Python 3.12, wheels only. Regenerate with: uv pip compile req.in --python-platform aarch64-unknown-linux-gnu --python-version 3.12 --only-binary :all:
+#    uv pip compile req.in --python-platform aarch64-unknown-linux-gnu --python-version 3.12 --only-binary :all: -o req.txt
+annotated-doc==0.0.6
+    # via fastapi
+annotated-types==0.8.0
+    # via pydantic
+anyio==4.16.0
+    # via
+    #   fastapi
+    #   httpx
+    #   starlette
+    #   watchfiles
+babel==2.18.0
+    # via courlan
+certifi==2026.10.23
+    # via
+    #   httpcore
+    #   httpx
+    #   trafilatura
+charset-normalizer==3.5.2
+    # via
+    #   htmldate
+    #   trafilatura
+click==8.5.1
+    # via
+    #   ddgs
+    #   uvicorn
+courlan==1.4.0
+    # via trafilatura
+dateparser==1.5.0
+    # via htmldate
+ddgs==9.16.1
+    # via -r req.in
+fastapi==0.162.5
+    # via -r req.in
+h11==0.16.0
+    # via
+    #   httpcore
+    #   uvicorn
+htmldate==1.11.0
+    # via trafilatura
+httpcore==1.0.9
+    # via httpx
+httptools==0.9.0
+    # via uvicorn
+httpx==0.28.1
+    # via -r req.in
+idna==3.20
+    # via
+    #   anyio
+    #   httpx
+justext==3.0.2
+    # via trafilatura
+lxml==6.1.3
+    # via
+    #   ddgs
+    #   htmldate
+    #   justext
+    #   lxml-html-clean
+    #   trafilatura
+lxml-html-clean==0.4.6
+    # via lxml
+mpmath==1.3.0
+    # via sympy
+numpy==2.5.4
+    # via
+    #   -r req.in
+    #   pandas
+    #   scipy
+opentelemetry-api==1.45.2
+    # via fastapi
+pandas==3.1.1
+    # via -r req.in
+primp==2.0.1
+    # via ddgs
+pydantic==2.14.3
+    # via fastapi
+pydantic-core==2.50.4
+    # via pydantic
+pypdf==7.0.1
+    # via -r req.in
+python-dateutil==4.0.0
+    # via
+    #   dateparser
+    #   htmldate
+    #   pandas
+python-dotenv==1.2.4
+    # via uvicorn
+pytz==2026.6
+    # via dateparser
+pyyaml==6.0.3
+    # via uvicorn
+redis==8.1.0
+    # via -r req.in
+regex==2026.11.9
+    # via dateparser
+scipy==1.18.1
+    # via -r req.in
+starlette==1.10.0
+    # via fastapi
+sympy==1.14.0
+    # via -r req.in
+tld==0.13.2
+    # via courlan
+trafilatura==2.3.1
+    # via -r req.in
+typing-extensions==4.16.0
+    # via
+    #   anyio
+    #   fastapi
+    #   opentelemetry-api
+    #   pydantic
+    #   pydantic-core
+    #   starlette
+    #   typing-inspection
+typing-inspection==0.4.5
+    # via
+    #   fastapi
+    #   pydantic
+tzdata==2026.6
+    # via python-dateutil
+tzlocal==5.4.5
+    # via dateparser
+urllib3==2.8.0
+    # via
+    #   courlan
+    #   htmldate
+    #   trafilatura
+uvicorn==0.54.0
+    # via -r req.in
+uvloop==0.23.0
+    # via uvicorn
+watchfiles==1.3.0
+    # via uvicorn
+websockets==17.4
+    # via uvicorn

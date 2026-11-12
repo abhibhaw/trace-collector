@@ -1,0 +1,69 @@
+# Shared cache, rate-limiter state, and write journal for the tools service.
+# volatile-lru: only keys with a TTL (cache) are evicted; journal keys have no TTL.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tools-valkey
+  namespace: experiments
+  labels: {app: tools-valkey, part-of: peira-tools}
+spec:
+  replicas: 1
+  strategy: {type: Recreate}
+  selector: {matchLabels: {app: tools-valkey}}
+  template:
+    metadata:
+      labels: {app: tools-valkey, part-of: peira-tools}
+      # Single replica holding the cache and write journal: keep Karpenter consolidation from evicting it.
+      annotations: {karpenter.sh/do-not-disrupt: "true"}
+    spec:
+      automountServiceAccountToken: false
+      nodeSelector: {peira.tech/pool: experiments}
+      tolerations: [{key: peira.tech/experiments, operator: Equal, value: "true", effect: NoSchedule}]
+      securityContext: {runAsNonRoot: true, runAsUser: 999, runAsGroup: 999, fsGroup: 999, seccompProfile: {type: RuntimeDefault}}
+      containers:
+      - name: valkey
+        image: valkey/valkey:8
+        command: ["sh", "-c"]
+        args:
+        - exec valkey-server --requirepass "$VALKEY_PASSWORD" --maxmemory 768mb --maxmemory-policy volatile-lru
+          --appendonly yes --appendfsync everysec --save "" --dir /data --protected-mode no
+        env:
+        - name: VALKEY_PASSWORD
+          valueFrom: {secretKeyRef: {name: tools-valkey, key: password}}
+        ports: [{containerPort: 6379, name: valkey}]
+        readinessProbe:
+          exec: {command: ["sh", "-c", "valkey-cli --no-auth-warning -a \"$VALKEY_PASSWORD\" ping | grep -q PONG"]}
+          periodSeconds: 5
+        livenessProbe:
+          tcpSocket: {port: 6379}
+          periodSeconds: 10
+        resources:
+          requests: {cpu: 250m, memory: 1Gi}
+          limits: {cpu: "1", memory: 1536Mi}
+        securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: [ALL]}}
+        volumeMounts: [{name: data, mountPath: /data}]
+      volumes:
+      - name: data
+        emptyDir: {sizeLimit: 4Gi}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tools-valkey
+  namespace: experiments
+  labels: {app: tools-valkey, part-of: peira-tools}
+spec:
+  selector: {app: tools-valkey}
+  ports: [{name: valkey, port: 6379, targetPort: 6379}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: tools-valkey-ingress
+  namespace: experiments
+spec:
+  podSelector: {matchLabels: {app: tools-valkey}}
+  policyTypes: [Ingress]
+  ingress:
+  - from: [{podSelector: {matchLabels: {app: tools}}}]
+    ports: [{port: 6379, protocol: TCP}]

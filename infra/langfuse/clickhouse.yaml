@@ -1,0 +1,111 @@
+# Single-node ClickHouse for Langfuse (no operator, no Keeper).
+# Langfuse runs with CLICKHOUSE_CLUSTER_ENABLED=false against it.
+# The `default` user password comes from Secret `langfuse-clickhouse-auth` (key `password`),
+# created by install.sh.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: clickhouse-config
+  namespace: experiments
+  labels: {app.kubernetes.io/name: clickhouse, app.kubernetes.io/part-of: langfuse}
+data:
+  # Keep system log tables small; they otherwise grow without bound.
+  system-logs.xml: |
+    <clickhouse>
+      <query_log replace="1">
+        <database>system</database><table>query_log</table>
+        <engine>ENGINE = MergeTree PARTITION BY event_date ORDER BY event_time TTL event_date + INTERVAL 3 DAY</engine>
+        <flush_interval_milliseconds>7500</flush_interval_milliseconds>
+      </query_log>
+      <part_log replace="1">
+        <database>system</database><table>part_log</table>
+        <engine>ENGINE = MergeTree PARTITION BY event_date ORDER BY event_time TTL event_date + INTERVAL 3 DAY</engine>
+        <flush_interval_milliseconds>7500</flush_interval_milliseconds>
+      </part_log>
+      <metric_log remove="1"/>
+      <asynchronous_metric_log remove="1"/>
+      <trace_log remove="1"/>
+      <text_log remove="1"/>
+      <processors_profile_log remove="1"/>
+      <query_metric_log remove="1"/>
+      <latency_log remove="1"/>
+      <logger>
+        <level>warning</level>
+        <console>1</console>
+      </logger>
+    </clickhouse>
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: clickhouse
+  namespace: experiments
+  labels: {app.kubernetes.io/name: clickhouse, app.kubernetes.io/part-of: langfuse}
+spec:
+  type: ClusterIP
+  selector: {app.kubernetes.io/name: clickhouse}
+  ports:
+    - {name: http, port: 8123, targetPort: http}
+    - {name: native, port: 9000, targetPort: native}
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: clickhouse
+  namespace: experiments
+  labels: {app.kubernetes.io/name: clickhouse, app.kubernetes.io/part-of: langfuse}
+spec:
+  serviceName: clickhouse
+  replicas: 1
+  selector:
+    matchLabels: {app.kubernetes.io/name: clickhouse}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: clickhouse, app.kubernetes.io/part-of: langfuse}
+      annotations: {karpenter.sh/do-not-disrupt: "true"}
+    spec:
+      nodeSelector: {peira.tech/pool: experiments}
+      tolerations:
+        - {key: peira.tech/experiments, operator: Equal, value: "true", effect: NoSchedule}
+      securityContext:
+        fsGroup: 101
+      terminationGracePeriodSeconds: 60
+      containers:
+        - name: clickhouse
+          image: clickhouse/clickhouse-server:26.8.36.3   # multi-arch (amd64, arm64)
+          imagePullPolicy: IfNotPresent
+          env:
+            - {name: CLICKHOUSE_USER, value: default}
+            - name: CLICKHOUSE_PASSWORD
+              valueFrom: {secretKeyRef: {name: langfuse-clickhouse-auth, key: password}}
+            - {name: CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT, value: "1"}
+          ports:
+            - {name: http, containerPort: 8123}
+            - {name: native, containerPort: 9000}
+          resources:
+            requests: {cpu: "1", memory: 3Gi}
+            limits: {cpu: "2", memory: 6Gi}
+          readinessProbe:
+            httpGet: {path: /ping, port: http}
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet: {path: /ping, port: http}
+            initialDelaySeconds: 30
+            periodSeconds: 20
+            failureThreshold: 6
+          volumeMounts:
+            - {name: data, mountPath: /var/lib/clickhouse}
+            - {name: config, mountPath: /etc/clickhouse-server/config.d/system-logs.xml, subPath: system-logs.xml}
+      volumes:
+        - name: config
+          configMap: {name: clickhouse-config}
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+        labels: {app.kubernetes.io/name: clickhouse}
+      spec:
+        accessModes: [ReadWriteOnce]
+        storageClassName: managed-csi
+        resources:
+          requests: {storage: 50Gi}

@@ -1,0 +1,3 @@
+{"task_id": "t003", "trace_id": "ac5a751220958c5d5f4f6b4760f24d0c", "status": "ok", "latency_s": 1.45}
+{"task_id": "t001", "trace_id": "d3bd318320004e04d4d215239698cff8", "status": "ok", "latency_s": 13.17}
+{"task_id": "t002", "trace_id": "76705d162cba181e836c55f4fa7d23c6", "status": "ok", "latency_s": 17.25}

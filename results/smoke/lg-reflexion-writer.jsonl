@@ -1,0 +1,9 @@
+{"task_id": "t002", "trace_id": "58a00066149de1f277a1f31157755ce3", "status": "ok", "latency_s": 34.88}
+{"task_id": "t003", "trace_id": "41f2619dfe03f3a1e51e60f552ba7c61", "status": "ok", "latency_s": 40.26}
+{"task_id": "t001", "trace_id": "8190830a57ec5e5bc74c78eb60f1b130", "status": "ok", "latency_s": 43.13}
+{"task_id": "t003", "trace_id": "eb1276ec4a8710bc0780ef403571e73a", "status": "error", "latency_s": 8.47, "error": "AnthropicInvalidRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'litellm.BadRequestError: AnthropicException - {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"messages.2: `tool_use` ids were found without `tool_result` blocks immediately after: toolu_01HtJStWp3zkSPNTk5JEhtT1. Each `tool_use` block must have a corresponding `tool_result` block in the next message.\"},\"request_id\":\"req_011CgxrktFw5LRXpheQchFv5\"}\\n\\nLiteLLM: "}
+{"task_id": "t002", "trace_id": "0250c1e093a7ea0917c40794db1a0c69", "status": "ok", "latency_s": 38.14}
+{"task_id": "t001", "trace_id": "fac261041eeb677f87990bcf9de26db0", "status": "ok", "latency_s": 53.8}
+{"task_id": "t002", "trace_id": "4c1a3d34b8eb294d3c6a84ad6fdb50e8", "status": "ok", "latency_s": 25.66}
+{"task_id": "t003", "trace_id": "85117a1430c18390f73ad87b03f91d68", "status": "ok", "latency_s": 46.55}
+{"task_id": "t001", "trace_id": "7465dbaf7edacca6a4f5510412b27382", "status": "ok", "latency_s": 47.6}

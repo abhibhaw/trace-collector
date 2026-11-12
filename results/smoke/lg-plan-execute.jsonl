@@ -1,0 +1,10 @@
+{"task_id": "t001", "trace_id": "0f31d5e4eebf3da37d015cbbe8f20547", "status": "ok", "latency_s": 4.29}
+{"task_id": "t003", "trace_id": "7aa7a80abf2b56b018d68d018a307b53", "status": "ok", "latency_s": 5.21}
+{"task_id": "t002", "trace_id": "33bc9033063a5123385bf8ee88929b5b", "status": "error", "latency_s": 52.47, "error": "ValidationError: 2 validation errors for Act\naction.Response\n  Input should be a valid dictionary or instance of Response [type=model_type, input_value='{\"response\": {\"response\"...n for the hometown.\"}}}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/model_type\naction.Plan\n  Input should be a valid dictionary or instance of Plan [type=model_type, input_value='{\"response\": {\"response\"...n for the hometown.\"}}}', input_type=str]\n    For further information v"}
+{"task_id": "t002", "trace_id": "2b408f76ca2464a8bf3d2963445762ad", "status": "ok", "latency_s": 36.95}
+{"task_id": "t001", "trace_id": "ed0223744d18accd0dc4503f252824cb", "status": "ok", "latency_s": 5.0}
+{"task_id": "t003", "trace_id": "3559bd58d29f8fcb41fff4c3024947f7", "status": "ok", "latency_s": 6.29}
+{"task_id": "t002", "trace_id": "eb73f95e93a1ccfef0c249ceb5b43bc1", "status": "error", "latency_s": 34.58, "error": "ValidationError: 2 validation errors for Act\naction.Response.response\n  Field required [type=missing, input_value={'plan': ['Obtain the geo...from Melbourne in km.']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing\naction.Plan.steps\n  Field required [type=missing, input_value={'plan': ['Obtain the geo...from Melbourne in km.']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing"}
+{"task_id": "t001", "trace_id": "1a56abd9e42fc9f2e89cfc9a9178aa1b", "status": "ok", "latency_s": 4.11}
+{"task_id": "t003", "trace_id": "0ddd84f9c9cb5fbbe665cdf2eff7b81b", "status": "ok", "latency_s": 4.59}
+{"task_id": "t002", "trace_id": "ba156c7674f76dbb5693020a9189da0d", "status": "ok", "latency_s": 32.68}

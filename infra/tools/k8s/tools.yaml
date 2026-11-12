@@ -1,0 +1,131 @@
+# Tools service. App code comes from ConfigMap tools-app; the init container builds the venv and downloads the SQLite files.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tools
+  namespace: experiments
+  labels: {app: tools, part-of: peira-tools}
+spec:
+  replicas: 3
+  revisionHistoryLimit: 3
+  strategy: {type: RollingUpdate, rollingUpdate: {maxUnavailable: 0, maxSurge: 1}}
+  selector: {matchLabels: {app: tools}}
+  template:
+    metadata:
+      labels: {app: tools, part-of: peira-tools}
+      annotations: {peira.tech/app-checksum: "__APP_CHECKSUM__"}
+    spec:
+      automountServiceAccountToken: false
+      enableServiceLinks: false
+      terminationGracePeriodSeconds: 60
+      nodeSelector: {peira.tech/pool: experiments}
+      tolerations: [{key: peira.tech/experiments, operator: Equal, value: "true", effect: NoSchedule}]
+      topologySpreadConstraints:
+      - {maxSkew: 1, topologyKey: kubernetes.io/hostname, whenUnsatisfiable: ScheduleAnyway, labelSelector: {matchLabels: {app: tools}}}
+      initContainers:
+      - name: install
+        image: ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+        command: ["sh", "/app/init.sh"]
+        resources:
+          requests: {cpu: 500m, memory: 512Mi}
+          limits: {cpu: "2", memory: 1Gi}
+        securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+        volumeMounts:
+        - {name: app, mountPath: /app, readOnly: true}
+        - {name: work, mountPath: /work}
+        - {name: data, mountPath: /data}
+      containers:
+      - name: tools
+        image: ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+        # Runs as container root with a minimal capability set so python_exec can drop to uid 65534.
+        command: ["/work/venv/bin/uvicorn", "main:app", "--app-dir", "/app", "--host", "0.0.0.0", "--port", "8080",
+                  "--workers", "2", "--timeout-keep-alive", "30", "--no-access-log"]
+        env:
+        - {name: DATA_DIR, value: /data}
+        - {name: SANDBOX_ROOT, value: /tmp/sbx}
+        - {name: SANDBOX_CONCURRENCY, value: "2"}
+        - {name: SANDBOX_MEM_MB, value: "1024"}
+        - {name: VALKEY_URL, value: "redis://tools-valkey:6379/0"}
+        - name: VALKEY_PASSWORD
+          valueFrom: {secretKeyRef: {name: tools-valkey, key: password}}
+        - {name: PYTHONDONTWRITEBYTECODE, value: "1"}
+        - {name: HOME, value: /tmp}
+        ports: [{containerPort: 8080, name: http}]
+        startupProbe:
+          httpGet: {path: /health, port: http}
+          periodSeconds: 3
+          failureThreshold: 40
+        readinessProbe:
+          httpGet: {path: /ready, port: http}
+          periodSeconds: 5
+          timeoutSeconds: 4
+          failureThreshold: 2
+        livenessProbe:
+          httpGet: {path: /health, port: http}
+          periodSeconds: 15
+          timeoutSeconds: 5
+          failureThreshold: 4
+        resources:
+          requests: {cpu: "1", memory: 1536Mi}
+          limits: {cpu: "3", memory: 5Gi}
+        securityContext:
+          runAsUser: 0
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          capabilities: {drop: [ALL], add: [CHOWN, DAC_OVERRIDE, FOWNER, SETUID, SETGID, KILL]}
+        volumeMounts:
+        - {name: app, mountPath: /app, readOnly: true}
+        - {name: work, mountPath: /work, readOnly: true}
+        - {name: data, mountPath: /data, readOnly: true}
+        - {name: tmp, mountPath: /tmp}
+      volumes:
+      - name: app
+        configMap: {name: tools-app, defaultMode: 0555}
+      - name: work
+        emptyDir: {sizeLimit: 3Gi}
+      - name: data
+        emptyDir: {sizeLimit: 512Mi}
+      - name: tmp
+        emptyDir: {sizeLimit: 2Gi}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tools
+  namespace: experiments
+  labels: {app: tools, part-of: peira-tools}
+spec:
+  selector: {app: tools}
+  ports: [{name: http, port: 8080, targetPort: http}]
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: tools
+  namespace: experiments
+spec:
+  maxUnavailable: 1
+  selector: {matchLabels: {app: tools}}
+---
+# Egress guard for the tools pods (python_exec shares the pod network; fetch_url must not reach internal hosts).
+# Allows DNS, valkey, and the public internet; blocks private ranges, IMDS, and the Azure wireserver.
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: tools-egress
+  namespace: experiments
+spec:
+  podSelector: {matchLabels: {app: tools}}
+  policyTypes: [Egress]
+  egress:
+  - ports: [{port: 53, protocol: UDP}, {port: 53, protocol: TCP}]
+  - to: [{podSelector: {matchLabels: {app: tools-valkey}}}]
+    ports: [{port: 6379, protocol: TCP}]
+  - to:
+    - ipBlock:
+        cidr: 0.0.0.0/0
+        except: [10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, 100.64.0.0/10, 169.254.0.0/16, 168.63.129.16/32, 127.0.0.0/8]
+    # Nodes resolve some hosts (e.g. pypi.org) to IPv6 only, so public IPv6 egress must be allowed too.
+    - ipBlock:
+        cidr: ::/0
+        except: ["fc00::/7", "fe80::/10", "::1/128", "64:ff9b::/96"]

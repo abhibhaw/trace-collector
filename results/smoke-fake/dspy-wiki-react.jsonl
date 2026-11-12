@@ -1,0 +1,1 @@
+{"task_id": "t001", "trace_id": "2c9a9da29869382ed3dc555d5232dc5e", "status": "error", "latency_s": 125.17, "error": "AdapterParseError: Adapter JSONAdapter failed to parse the LM response. \n\nLM Response: {} \n\nExpected to find output fields in the LM response: [next_thought] \n\nActual output fields parsed from the LM response: [] \n\n"}

@@ -1,0 +1,4 @@
+# crewai family. Install: uv pip install -p agents/crewai/.venv -r agents/crewai/requirements.txt -e harness
+crewai[anthropic]==1.15.40
+openinference-instrumentation-crewai==1.1.26
+anthropic==0.73.0

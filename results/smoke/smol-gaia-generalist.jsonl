@@ -1,0 +1,6 @@
+{"task_id": "t002", "trace_id": "36c885d88053cc16b9e8849a593a6404", "status": "error", "latency_s": 11.13, "error": "InternalServerError: litellm.InternalServerError: AnthropicException - [Errno 61] Connection refused. Handle with `litellm.InternalServerError`."}
+{"task_id": "t001", "trace_id": "c5cb068d8adcae95a27665f4500512c7", "status": "error", "latency_s": 11.15, "error": "AgentGenerationError: Error while generating output:\nlitellm.InternalServerError: AnthropicException - [Errno 61] Connection refused. Handle with `litellm.InternalServerError`."}
+{"task_id": "t003", "trace_id": "196f283c30d4302f76d1fac8512556b3", "status": "error", "latency_s": 11.15, "error": "AgentGenerationError: Error while generating output:\nlitellm.InternalServerError: AnthropicException - [Errno 61] Connection refused. Handle with `litellm.InternalServerError`."}
+{"task_id": "t003", "trace_id": "0831bd5b16ff7cf6bff5710bfdf0c263", "status": "ok", "latency_s": 13.5}
+{"task_id": "t001", "trace_id": "4a4c508315fcf9d415b285e48d5acd5e", "status": "ok", "latency_s": 13.79}
+{"task_id": "t002", "trace_id": "ce5a5b6e96b8d96016fd8700a3029a37", "status": "ok", "latency_s": 19.63}

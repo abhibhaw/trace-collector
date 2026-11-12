@@ -1,0 +1,12 @@
+# One venv for dspy + strands + haystack. Co-resolves with langfuse==5.2.0 (linux/arm64, py3.12).
+langfuse==5.2.0
+dspy[deno]==3.5.0
+strands-agents[anthropic,otel]==1.64.0
+haystack-ai==3.5.0
+anthropic-haystack==8.1.0
+anthropic==0.125.0
+deno==2.9.8
+openinference-instrumentation-dspy==0.1.53
+openinference-instrumentation-haystack==0.1.52
+opentelemetry-api==1.45.2
+opentelemetry-sdk==1.45.2

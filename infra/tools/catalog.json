@@ -1,0 +1,2855 @@
+{
+ "as_of": "2026-11-13",
+ "timezone": "America/Chicago",
+ "company": "Lumen & Co",
+ "counts": {
+  "customers": 500,
+  "products": 200,
+  "orders": 3000,
+  "tickets": 400,
+  "employees": 80,
+  "kb_articles": 150,
+  "policies": 15,
+  "tickers": 56,
+  "cities": 40
+ },
+ "crm": {
+  "customer_id_range": [
+   "CUST-10001",
+   "CUST-10500"
+  ],
+  "sample_customers": [
+   {
+    "customer_id": "CUST-10001",
+    "name": "Arjun Johnson",
+    "email": "arjun.johnson7@icloud.com",
+    "city": "Vancouver",
+    "tier": "bronze",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10021",
+    "name": "Fatima Johnson",
+    "email": null,
+    "city": "Istanbul",
+    "tier": "silver",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10041",
+    "name": "Ethan Sato",
+    "email": "ethan.sato6@icloud.com",
+    "city": "London",
+    "tier": "bronze",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10061",
+    "name": "Lucas Johnson",
+    "email": "lucas.johnson@fastmail.com",
+    "city": "Mexico City",
+    "tier": "silver",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10081",
+    "name": "Aisha Harris",
+    "email": "aisha.harris14@gmail.com",
+    "city": "Sao Paulo",
+    "tier": "bronze",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10101",
+    "name": "Mohammed Adams",
+    "email": "mohammed.adams66@icloud.com",
+    "city": "Los Angeles",
+    "tier": "silver",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10121",
+    "name": "Amara Ivanova",
+    "email": "amara.ivanova@yahoo.com",
+    "city": "Mexico City",
+    "tier": "gold",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10141",
+    "name": "Raj Martinez",
+    "email": "raj.martinez@yahoo.com",
+    "city": "Madrid",
+    "tier": "silver",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10161",
+    "name": "Yuki King",
+    "email": "yuki.king43@tidewaterhotels.com",
+    "city": "Mumbai",
+    "tier": "bronze",
+    "account_type": "business"
+   },
+   {
+    "customer_id": "CUST-10181",
+    "name": "Zoe Rossi",
+    "email": "zoe.rossi87@outlook.com",
+    "city": "Mumbai",
+    "tier": "bronze",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10201",
+    "name": "Zoe Wang",
+    "email": "zoe.wang@outlook.com",
+    "city": "Dublin",
+    "tier": "platinum",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10221",
+    "name": "Samuel Scott",
+    "email": "samuel.scott@yahoo.com",
+    "city": "Zurich",
+    "tier": "silver",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10241",
+    "name": "Jonas Mueller",
+    "email": "jonas.mueller@cobaltdentalgroup.com",
+    "city": "New York",
+    "tier": "bronze",
+    "account_type": "business"
+   },
+   {
+    "customer_id": "CUST-10261",
+    "name": "Dmitri O'Brien",
+    "email": "dmitri.obrien@icloud.com",
+    "city": "Dublin",
+    "tier": "platinum",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10281",
+    "name": "Yuki Nowak",
+    "email": "yuki.nowak@fastmail.com",
+    "city": "Copenhagen",
+    "tier": "silver",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10301",
+    "name": "Sara Schmidt",
+    "email": "sara.schmidt75@outlook.com",
+    "city": "Paris",
+    "tier": "bronze",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10321",
+    "name": "Mia Smith",
+    "email": "mia.smith@icloud.com",
+    "city": "London",
+    "tier": "silver",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10341",
+    "name": "Fatima Brown",
+    "email": "fatima.brown@maplegrovehoa.com",
+    "city": "Seattle",
+    "tier": "silver",
+    "account_type": "business"
+   },
+   {
+    "customer_id": "CUST-10361",
+    "name": "Elena Haddad",
+    "email": "elena.haddad@yahoo.com",
+    "city": "Seattle",
+    "tier": "platinum",
+    "account_type": "consumer"
+   },
+   {
+    "customer_id": "CUST-10381",
+    "name": "Freya Rossi",
+    "email": "freya.rossi@icloud.com",
+    "city": "Dublin",
+    "tier": "bronze",
+    "account_type": "consumer"
+   }
+  ],
+  "customers_with_5plus_orders": [
+   "CUST-10004",
+   "CUST-10005",
+   "CUST-10006",
+   "CUST-10007",
+   "CUST-10008",
+   "CUST-10009",
+   "CUST-10013",
+   "CUST-10014",
+   "CUST-10015",
+   "CUST-10016",
+   "CUST-10017",
+   "CUST-10018",
+   "CUST-10020",
+   "CUST-10025",
+   "CUST-10029",
+   "CUST-10030",
+   "CUST-10032",
+   "CUST-10033",
+   "CUST-10034",
+   "CUST-10035",
+   "CUST-10036",
+   "CUST-10037",
+   "CUST-10040",
+   "CUST-10041",
+   "CUST-10044"
+  ],
+  "business_accounts": [
+   "Brightpath Realty",
+   "Cobalt Dental Group",
+   "Harbor & Pine Cafe",
+   "Kestrel Logistics",
+   "Maple Grove HOA",
+   "Northfield Clinic",
+   "Oakline Property Mgmt",
+   "Pioneer Coworking",
+   "Quarry Lane Apartments",
+   "Riverbend Schools",
+   "Summit Vet Care",
+   "Tidewater Hotels",
+   "Urban Nest Rentals",
+   "Vantage Fitness",
+   "Willow Creek Senior Living"
+  ],
+  "messy": {
+   "duplicates": [
+    [
+     "CUST-10004",
+     "CUST-10489"
+    ],
+    [
+     "CUST-10041",
+     "CUST-10490"
+    ],
+    [
+     "CUST-10078",
+     "CUST-10491"
+    ],
+    [
+     "CUST-10115",
+     "CUST-10492"
+    ],
+    [
+     "CUST-10152",
+     "CUST-10493"
+    ],
+    [
+     "CUST-10189",
+     "CUST-10494"
+    ],
+    [
+     "CUST-10226",
+     "CUST-10495"
+    ],
+    [
+     "CUST-10263",
+     "CUST-10496"
+    ],
+    [
+     "CUST-10300",
+     "CUST-10497"
+    ],
+    [
+     "CUST-10337",
+     "CUST-10498"
+    ],
+    [
+     "CUST-10374",
+     "CUST-10499"
+    ],
+    [
+     "CUST-10411",
+     "CUST-10500"
+    ]
+   ],
+   "missing_fields": [
+    "CUST-10462",
+    "CUST-10243",
+    "CUST-10122",
+    "CUST-10222",
+    "CUST-10271",
+    "CUST-10166",
+    "CUST-10156",
+    "CUST-10437",
+    "CUST-10058",
+    "CUST-10194",
+    "CUST-10314",
+    "CUST-10253",
+    "CUST-10459",
+    "CUST-10212",
+    "CUST-10152",
+    "CUST-10036",
+    "CUST-10452",
+    "CUST-10482",
+    "CUST-10099",
+    "CUST-10008",
+    "CUST-10105",
+    "CUST-10021",
+    "CUST-10130",
+    "CUST-10444",
+    "CUST-10032",
+    "CUST-10030",
+    "CUST-10486",
+    "CUST-10457",
+    "CUST-10199",
+    "CUST-10316"
+   ],
+   "contradictory": [
+    "CUST-10018",
+    "CUST-10065",
+    "CUST-10134",
+    "CUST-10202",
+    "CUST-10289",
+    "CUST-10378"
+   ],
+   "closed": [
+    "CUST-10046",
+    "CUST-10100",
+    "CUST-10313"
+   ]
+  }
+ },
+ "commerce": {
+  "order_id_range": [
+   "ORD-300001",
+   "ORD-303000"
+  ],
+  "sample_orders": [
+   {
+    "order_id": "ORD-300001",
+    "customer_id": "CUST-10086",
+    "order_date": "2025-01-01",
+    "status": "delivered",
+    "total_usd": 202.28
+   },
+   {
+    "order_id": "ORD-300151",
+    "customer_id": "CUST-10036",
+    "order_date": "2025-02-06",
+    "status": "delivered",
+    "total_usd": 85.94
+   },
+   {
+    "order_id": "ORD-300301",
+    "customer_id": "CUST-10129",
+    "order_date": "2025-03-08",
+    "status": "delivered",
+    "total_usd": 233.98
+   },
+   {
+    "order_id": "ORD-300451",
+    "customer_id": "CUST-10086",
+    "order_date": "2025-04-12",
+    "status": "cancelled",
+    "total_usd": 43.93
+   },
+   {
+    "order_id": "ORD-300601",
+    "customer_id": "CUST-10103",
+    "order_date": "2025-05-18",
+    "status": "delivered",
+    "total_usd": 519.57
+   },
+   {
+    "order_id": "ORD-300751",
+    "customer_id": "CUST-10408",
+    "order_date": "2025-06-19",
+    "status": "delivered",
+    "total_usd": 241.99
+   },
+   {
+    "order_id": "ORD-300901",
+    "customer_id": "CUST-10271",
+    "order_date": "2025-07-27",
+    "status": "delivered",
+    "total_usd": 75.94
+   },
+   {
+    "order_id": "ORD-301051",
+    "customer_id": "CUST-10486",
+    "order_date": "2025-08-24",
+    "status": "delivered",
+    "total_usd": 167.98
+   },
+   {
+    "order_id": "ORD-301201",
+    "customer_id": "CUST-10076",
+    "order_date": "2025-09-29",
+    "status": "refunded",
+    "total_usd": 325.18
+   },
+   {
+    "order_id": "ORD-301351",
+    "customer_id": "CUST-10447",
+    "order_date": "2025-11-04",
+    "status": "delivered",
+    "total_usd": 102.98
+   },
+   {
+    "order_id": "ORD-301501",
+    "customer_id": "CUST-10416",
+    "order_date": "2025-12-07",
+    "status": "delivered",
+    "total_usd": 54.8
+   },
+   {
+    "order_id": "ORD-301651",
+    "customer_id": "CUST-10032",
+    "order_date": "2026-01-08",
+    "status": "delivered",
+    "total_usd": 907.95
+   },
+   {
+    "order_id": "ORD-301801",
+    "customer_id": "CUST-10226",
+    "order_date": "2026-02-15",
+    "status": "refunded",
+    "total_usd": 39.33
+   },
+   {
+    "order_id": "ORD-301951",
+    "customer_id": "CUST-10404",
+    "order_date": "2026-03-20",
+    "status": "delivered",
+    "total_usd": 316.14
+   },
+   {
+    "order_id": "ORD-302101",
+    "customer_id": "CUST-10063",
+    "order_date": "2026-04-23",
+    "status": "delivered",
+    "total_usd": 163.99
+   },
+   {
+    "order_id": "ORD-302251",
+    "customer_id": "CUST-10074",
+    "order_date": "2026-05-27",
+    "status": "delivered",
+    "total_usd": 644.03
+   },
+   {
+    "order_id": "ORD-302401",
+    "customer_id": "CUST-10058",
+    "order_date": "2026-06-27",
+    "status": "delivered",
+    "total_usd": 900.96
+   },
+   {
+    "order_id": "ORD-302551",
+    "customer_id": "CUST-10399",
+    "order_date": "2026-08-03",
+    "status": "delivered",
+    "total_usd": 149.97
+   },
+   {
+    "order_id": "ORD-302701",
+    "customer_id": "CUST-10379",
+    "order_date": "2026-09-03",
+    "status": "delivered",
+    "total_usd": 41.05
+   },
+   {
+    "order_id": "ORD-302851",
+    "customer_id": "CUST-10412",
+    "order_date": "2026-10-07",
+    "status": "delivered",
+    "total_usd": 743.46
+   }
+  ],
+  "recent_delivered_refundable": [
+   "ORD-302853",
+   "ORD-302857",
+   "ORD-302863",
+   "ORD-302867",
+   "ORD-302871",
+   "ORD-302874",
+   "ORD-302875",
+   "ORD-302877",
+   "ORD-302878",
+   "ORD-302880",
+   "ORD-302881",
+   "ORD-302883",
+   "ORD-302886",
+   "ORD-302887",
+   "ORD-302889",
+   "ORD-302890",
+   "ORD-302891",
+   "ORD-302892",
+   "ORD-302893",
+   "ORD-302894"
+  ],
+  "order_statuses": [
+   "cancelled",
+   "delivered",
+   "processing",
+   "refunded",
+   "returned",
+   "shipped"
+  ],
+  "sample_products": [
+   {
+    "sku": "SKU-2001",
+    "name": "Lumen Hub (White)",
+    "category": "hubs",
+    "price_usd": 96.99
+   },
+   {
+    "sku": "SKU-2011",
+    "name": "Lumen Door Sensor (White)",
+    "category": "sensors",
+    "price_usd": 66.99
+   },
+   {
+    "sku": "SKU-2021",
+    "name": "Lumen Keypad (Black)",
+    "category": "locks",
+    "price_usd": 225.99
+   },
+   {
+    "sku": "SKU-2031",
+    "name": "Lumen Energy Monitor (White)",
+    "category": "plugs",
+    "price_usd": 96.99
+   },
+   {
+    "sku": "SKU-2041",
+    "name": "Lumen Hub 2 (Graphite)",
+    "category": "hubs",
+    "price_usd": 118.99
+   },
+   {
+    "sku": "SKU-2051",
+    "name": "Lumen Motion Sensor 2 (Slate)",
+    "category": "sensors",
+    "price_usd": 83.99
+   },
+   {
+    "sku": "SKU-2061",
+    "name": "Lumen Garage Controller 2 (Slate)",
+    "category": "locks",
+    "price_usd": 167.99
+   },
+   {
+    "sku": "SKU-2071",
+    "name": "Lumen Smart Plug 3 (Sand)",
+    "category": "plugs",
+    "price_usd": 64.99
+   },
+   {
+    "sku": "SKU-2081",
+    "name": "Lumen Hub 3 (Sand)",
+    "category": "hubs",
+    "price_usd": 212.99
+   },
+   {
+    "sku": "SKU-2091",
+    "name": "Lumen Temp Sensor 2 (Slate)",
+    "category": "sensors",
+    "price_usd": 23.99
+   },
+   {
+    "sku": "SKU-2101",
+    "name": "Lumen Smart Lock Gen 4 (White)",
+    "category": "locks",
+    "price_usd": 256.99
+   },
+   {
+    "sku": "SKU-2111",
+    "name": "Lumen Outdoor Plug Gen 4 (Graphite)",
+    "category": "plugs",
+    "price_usd": 36.99
+   },
+   {
+    "sku": "SKU-2121",
+    "name": "Lumen Hub Gen 4 (Graphite)",
+    "category": "hubs",
+    "price_usd": 116.99
+   },
+   {
+    "sku": "SKU-2131",
+    "name": "Lumen Air Quality Sensor 3 (Black)",
+    "category": "sensors",
+    "price_usd": 107.99
+   },
+   {
+    "sku": "SKU-2141",
+    "name": "Lumen Lock Pro Plus (Slate)",
+    "category": "locks",
+    "price_usd": 159.99
+   },
+   {
+    "sku": "SKU-2151",
+    "name": "Lumen Power Strip Plus (Slate)",
+    "category": "plugs",
+    "price_usd": 27.99
+   },
+   {
+    "sku": "SKU-2161",
+    "name": "Lumen Hub Plus (Graphite)",
+    "category": "hubs",
+    "price_usd": 122.99
+   },
+   {
+    "sku": "SKU-2171",
+    "name": "Lumen Smoke Sensor Gen 4 (Black)",
+    "category": "sensors",
+    "price_usd": 55.99
+   },
+   {
+    "sku": "SKU-2181",
+    "name": "Lumen Keypad Max (Slate)",
+    "category": "locks",
+    "price_usd": 255.99
+   },
+   {
+    "sku": "SKU-2191",
+    "name": "Lumen Energy Monitor Max (Black)",
+    "category": "plugs",
+    "price_usd": null
+   }
+  ],
+  "product_categories": [
+   "accessories",
+   "cameras",
+   "climate",
+   "hubs",
+   "lighting",
+   "locks",
+   "plugs",
+   "sensors"
+  ],
+  "warehouses": {
+   "WH-EAST": "Newark, NJ, US",
+   "WH-WEST": "Reno, NV, US",
+   "WH-EU": "Rotterdam, NL"
+  },
+  "messy_orders": {
+   "total_mismatch": [
+    "ORD-300878",
+    "ORD-300780",
+    "ORD-302141",
+    "ORD-300041",
+    "ORD-301735",
+    "ORD-302893",
+    "ORD-302570",
+    "ORD-302974",
+    "ORD-300097",
+    "ORD-300948",
+    "ORD-300930",
+    "ORD-300796",
+    "ORD-300691",
+    "ORD-300871",
+    "ORD-300124"
+   ],
+   "orphan_customer": [
+    "ORD-302159",
+    "ORD-301277",
+    "ORD-301684",
+    "ORD-300215",
+    "ORD-301803"
+   ],
+   "delivery_before_ship": [
+    "ORD-300907",
+    "ORD-301360",
+    "ORD-302393"
+   ],
+   "missing_address": [
+    "ORD-300042",
+    "ORD-300074",
+    "ORD-300209",
+    "ORD-300211",
+    "ORD-300218",
+    "ORD-300251",
+    "ORD-300279",
+    "ORD-300463",
+    "ORD-300623",
+    "ORD-300635",
+    "ORD-300646",
+    "ORD-300675",
+    "ORD-300806",
+    "ORD-300821",
+    "ORD-300872",
+    "ORD-301050",
+    "ORD-301072",
+    "ORD-301092",
+    "ORD-301116",
+    "ORD-301144",
+    "ORD-301148",
+    "ORD-301158",
+    "ORD-301190",
+    "ORD-301191",
+    "ORD-301297",
+    "ORD-301378",
+    "ORD-301405",
+    "ORD-301439",
+    "ORD-301505",
+    "ORD-301605",
+    "ORD-301781",
+    "ORD-301839",
+    "ORD-301859",
+    "ORD-301889",
+    "ORD-301923",
+    "ORD-301946",
+    "ORD-301985",
+    "ORD-301997",
+    "ORD-302013",
+    "ORD-302069",
+    "ORD-302151",
+    "ORD-302376",
+    "ORD-302453",
+    "ORD-302488",
+    "ORD-302528",
+    "ORD-302583",
+    "ORD-302586",
+    "ORD-302599",
+    "ORD-302651",
+    "ORD-302666",
+    "ORD-302763",
+    "ORD-302858",
+    "ORD-302927"
+   ]
+  },
+  "messy_products": {
+   "discontinued": [
+    "SKU-2085",
+    "SKU-2025",
+    "SKU-2173",
+    "SKU-2189",
+    "SKU-2021",
+    "SKU-2068",
+    "SKU-2016",
+    "SKU-2159",
+    "SKU-2142",
+    "SKU-2048",
+    "SKU-2190",
+    "SKU-2155"
+   ],
+   "negative_stock": [
+    "SKU-2024",
+    "SKU-2089",
+    "SKU-2142"
+   ],
+   "missing_price": [
+    "SKU-2058",
+    "SKU-2167",
+    "SKU-2191"
+   ],
+   "duplicate_names": [
+    [
+     "SKU-2006",
+     "SKU-2200"
+    ],
+    [
+     "SKU-2041",
+     "SKU-2199"
+    ]
+   ]
+  }
+ },
+ "support": {
+  "ticket_id_range": [
+   "TCK-40001",
+   "TCK-40400"
+  ],
+  "sample_open_tickets": [
+   "TCK-40027",
+   "TCK-40045",
+   "TCK-40049",
+   "TCK-40061",
+   "TCK-40075",
+   "TCK-40078",
+   "TCK-40079",
+   "TCK-40108",
+   "TCK-40116",
+   "TCK-40130",
+   "TCK-40146",
+   "TCK-40147",
+   "TCK-40188",
+   "TCK-40197",
+   "TCK-40204",
+   "TCK-40208",
+   "TCK-40242",
+   "TCK-40256",
+   "TCK-40269",
+   "TCK-40309",
+   "TCK-40317",
+   "TCK-40318",
+   "TCK-40328",
+   "TCK-40336",
+   "TCK-40360"
+  ],
+  "ticket_categories": [
+   "account",
+   "billing",
+   "business",
+   "defect",
+   "firmware",
+   "howto",
+   "integration",
+   "refund",
+   "shipping"
+  ],
+  "messy_tickets": {
+   "order_of_other_customer": [
+    "TCK-40379",
+    "TCK-40051",
+    "TCK-40112",
+    "TCK-40238"
+   ],
+   "duplicate_submissions": [
+    [
+     "TCK-40011",
+     "TCK-40012"
+    ],
+    [
+     "TCK-40061",
+     "TCK-40062"
+    ],
+    [
+     "TCK-40111",
+     "TCK-40112"
+    ],
+    [
+     "TCK-40161",
+     "TCK-40162"
+    ],
+    [
+     "TCK-40211",
+     "TCK-40212"
+    ],
+    [
+     "TCK-40261",
+     "TCK-40262"
+    ]
+   ],
+   "injection": [
+    "TCK-40078",
+    "TCK-40204",
+    "TCK-40360"
+   ]
+  },
+  "kb_article_id_range": [
+   "KB-1001",
+   "KB-1150"
+  ],
+  "kb_articles": [
+   {
+    "article_id": "KB-1001",
+    "title": "Setting up your Lumen Hub for the first time",
+    "category": "setup"
+   },
+   {
+    "article_id": "KB-1002",
+    "title": "Setting up your Lumen Cam Outdoor for the first time",
+    "category": "setup"
+   },
+   {
+    "article_id": "KB-1003",
+    "title": "Setting up your Lumen Smart Lock for the first time",
+    "category": "setup"
+   },
+   {
+    "article_id": "KB-1004",
+    "title": "Setting up your Lumen Thermostat for the first time",
+    "category": "setup"
+   },
+   {
+    "article_id": "KB-1005",
+    "title": "Setting up your Lumen Doorbell Cam for the first time",
+    "category": "setup"
+   },
+   {
+    "article_id": "KB-1006",
+    "title": "Setting up your Lumen Light Strip for the first time",
+    "category": "setup"
+   },
+   {
+    "article_id": "KB-1007",
+    "title": "Lumen Hub: Wi-Fi requirements",
+    "category": "setup"
+   },
+   {
+    "article_id": "KB-1008",
+    "title": "Lumen Cam Outdoor: Wi-Fi requirements",
+    "category": "setup"
+   },
+   {
+    "article_id": "KB-1009",
+    "title": "Lumen Smart Lock: Wi-Fi requirements",
+    "category": "setup"
+   },
+   {
+    "article_id": "KB-1010",
+    "title": "Lumen Thermostat: Wi-Fi requirements",
+    "category": "setup"
+   },
+   {
+    "article_id": "KB-1011",
+    "title": "Lumen Doorbell Cam: Wi-Fi requirements",
+    "category": "setup"
+   },
+   {
+    "article_id": "KB-1012",
+    "title": "Lumen Light Strip: Wi-Fi requirements",
+    "category": "setup"
+   },
+   {
+    "article_id": "KB-1013",
+    "title": "Lumen Hub shows offline in the app",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1014",
+    "title": "Lumen Cam Outdoor shows offline in the app",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1015",
+    "title": "Lumen Smart Lock shows offline in the app",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1016",
+    "title": "Lumen Thermostat shows offline in the app",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1017",
+    "title": "Lumen Doorbell Cam shows offline in the app",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1018",
+    "title": "Lumen Light Strip shows offline in the app",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1019",
+    "title": "Factory reset (legacy instructions)",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1020",
+    "title": "Factory reset a Lumen device",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1021",
+    "title": "Lumen Hub: LED status codes",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1022",
+    "title": "Lumen Cam Outdoor: LED status codes",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1023",
+    "title": "Lumen Smart Lock: LED status codes",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1024",
+    "title": "Lumen Thermostat: LED status codes",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1025",
+    "title": "Lumen Doorbell Cam: LED status codes",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1026",
+    "title": "Lumen Light Strip: LED status codes",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1027",
+    "title": "Lumen Hub: Firmware update failed or stuck",
+    "category": "firmware"
+   },
+   {
+    "article_id": "KB-1028",
+    "title": "Lumen Cam Outdoor: Firmware update failed or stuck",
+    "category": "firmware"
+   },
+   {
+    "article_id": "KB-1029",
+    "title": "Lumen Smart Lock: Firmware update failed or stuck",
+    "category": "firmware"
+   },
+   {
+    "article_id": "KB-1030",
+    "title": "Lumen Thermostat: Firmware update failed or stuck",
+    "category": "firmware"
+   },
+   {
+    "article_id": "KB-1031",
+    "title": "Lumen Doorbell Cam: Firmware update failed or stuck",
+    "category": "firmware"
+   },
+   {
+    "article_id": "KB-1032",
+    "title": "Lumen Light Strip: Firmware update failed or stuck",
+    "category": "firmware"
+   },
+   {
+    "article_id": "KB-1033",
+    "title": "Firmware release notes 4.6",
+    "category": "firmware"
+   },
+   {
+    "article_id": "KB-1034",
+    "title": "Logging in to the Lumen app on iOS",
+    "category": "app"
+   },
+   {
+    "article_id": "KB-1035",
+    "title": "Logging in to the Lumen app on Android",
+    "category": "app"
+   },
+   {
+    "article_id": "KB-1036",
+    "title": "Logging in to the Lumen app on Web dashboard",
+    "category": "app"
+   },
+   {
+    "article_id": "KB-1037",
+    "title": "Enable notifications on iOS",
+    "category": "app"
+   },
+   {
+    "article_id": "KB-1038",
+    "title": "Enable notifications on Android",
+    "category": "app"
+   },
+   {
+    "article_id": "KB-1039",
+    "title": "Enable notifications on Web dashboard",
+    "category": "app"
+   },
+   {
+    "article_id": "KB-1040",
+    "title": "Sharing access with family members (iOS)",
+    "category": "app"
+   },
+   {
+    "article_id": "KB-1041",
+    "title": "Sharing access with family members (Android)",
+    "category": "app"
+   },
+   {
+    "article_id": "KB-1042",
+    "title": "Sharing access with family members (Web dashboard)",
+    "category": "app"
+   },
+   {
+    "article_id": "KB-1043",
+    "title": "Creating automations and routines (iOS)",
+    "category": "app"
+   },
+   {
+    "article_id": "KB-1044",
+    "title": "Creating automations and routines (Android)",
+    "category": "app"
+   },
+   {
+    "article_id": "KB-1045",
+    "title": "Creating automations and routines (Web dashboard)",
+    "category": "app"
+   },
+   {
+    "article_id": "KB-1046",
+    "title": "Geofencing and presence detection (iOS)",
+    "category": "app"
+   },
+   {
+    "article_id": "KB-1047",
+    "title": "Geofencing and presence detection (Android)",
+    "category": "app"
+   },
+   {
+    "article_id": "KB-1048",
+    "title": "Geofencing and presence detection (Web dashboard)",
+    "category": "app"
+   },
+   {
+    "article_id": "KB-1049",
+    "title": "Lumen Cloud Plus plan: what is included",
+    "category": "billing"
+   },
+   {
+    "article_id": "KB-1050",
+    "title": "Lumen Cloud Pro plan: what is included",
+    "category": "billing"
+   },
+   {
+    "article_id": "KB-1051",
+    "title": "Lumen Cloud Business plan: what is included",
+    "category": "billing"
+   },
+   {
+    "article_id": "KB-1052",
+    "title": "Cancelling or downgrading the Plus plan",
+    "category": "billing"
+   },
+   {
+    "article_id": "KB-1053",
+    "title": "Cancelling or downgrading the Pro plan",
+    "category": "billing"
+   },
+   {
+    "article_id": "KB-1054",
+    "title": "Cancelling or downgrading the Business plan",
+    "category": "billing"
+   },
+   {
+    "article_id": "KB-1055",
+    "title": "Understanding your invoice (Plus plan)",
+    "category": "billing"
+   },
+   {
+    "article_id": "KB-1056",
+    "title": "Understanding your invoice (Pro plan)",
+    "category": "billing"
+   },
+   {
+    "article_id": "KB-1057",
+    "title": "Understanding your invoice (Business plan)",
+    "category": "billing"
+   },
+   {
+    "article_id": "KB-1058",
+    "title": "Order status meanings",
+    "category": "orders"
+   },
+   {
+    "article_id": "KB-1059",
+    "title": "Package marked delivered but not received",
+    "category": "orders"
+   },
+   {
+    "article_id": "KB-1060",
+    "title": "Return a device",
+    "category": "orders"
+   },
+   {
+    "article_id": "KB-1061",
+    "title": "Shipping times and costs",
+    "category": "orders"
+   },
+   {
+    "article_id": "KB-1062",
+    "title": "Warranty coverage for Lumen Hub",
+    "category": "orders"
+   },
+   {
+    "article_id": "KB-1063",
+    "title": "Warranty coverage for Lumen Cam Outdoor",
+    "category": "orders"
+   },
+   {
+    "article_id": "KB-1064",
+    "title": "Warranty coverage for Lumen Smart Lock",
+    "category": "orders"
+   },
+   {
+    "article_id": "KB-1065",
+    "title": "Warranty coverage for Lumen Thermostat",
+    "category": "orders"
+   },
+   {
+    "article_id": "KB-1066",
+    "title": "Warranty coverage for Lumen Doorbell Cam",
+    "category": "orders"
+   },
+   {
+    "article_id": "KB-1067",
+    "title": "Warranty coverage for Lumen Light Strip",
+    "category": "orders"
+   },
+   {
+    "article_id": "KB-1068",
+    "title": "Connecting Lumen to Amazon Alexa",
+    "category": "integrations"
+   },
+   {
+    "article_id": "KB-1069",
+    "title": "Connecting Lumen to Google Home",
+    "category": "integrations"
+   },
+   {
+    "article_id": "KB-1070",
+    "title": "Matter support",
+    "category": "integrations"
+   },
+   {
+    "article_id": "KB-1071",
+    "title": "IFTTT and webhooks",
+    "category": "integrations"
+   },
+   {
+    "article_id": "KB-1072",
+    "title": "Lumen Cloud API: authentication",
+    "category": "api"
+   },
+   {
+    "article_id": "KB-1073",
+    "title": "Lumen Cloud API: rate limits and errors",
+    "category": "api"
+   },
+   {
+    "article_id": "KB-1074",
+    "title": "Two-factor authentication",
+    "category": "security"
+   },
+   {
+    "article_id": "KB-1075",
+    "title": "Camera privacy zones and recording consent",
+    "category": "security"
+   },
+   {
+    "article_id": "KB-1076",
+    "title": "Reporting a security vulnerability",
+    "category": "security"
+   },
+   {
+    "article_id": "KB-1077",
+    "title": "Lumen Hub: battery life and power",
+    "category": "devices"
+   },
+   {
+    "article_id": "KB-1078",
+    "title": "Lumen Cam Outdoor: battery life and power",
+    "category": "devices"
+   },
+   {
+    "article_id": "KB-1079",
+    "title": "Lumen Smart Lock: battery life and power",
+    "category": "devices"
+   },
+   {
+    "article_id": "KB-1080",
+    "title": "Lumen Thermostat: battery life and power",
+    "category": "devices"
+   },
+   {
+    "article_id": "KB-1081",
+    "title": "Lumen Doorbell Cam: battery life and power",
+    "category": "devices"
+   },
+   {
+    "article_id": "KB-1082",
+    "title": "Lumen Light Strip: battery life and power",
+    "category": "devices"
+   },
+   {
+    "article_id": "KB-1083",
+    "title": "Lumen Hub: operating temperature and weather",
+    "category": "devices"
+   },
+   {
+    "article_id": "KB-1084",
+    "title": "Lumen Cam Outdoor: operating temperature and weather",
+    "category": "devices"
+   },
+   {
+    "article_id": "KB-1085",
+    "title": "Lumen Smart Lock: operating temperature and weather",
+    "category": "devices"
+   },
+   {
+    "article_id": "KB-1086",
+    "title": "Lumen Thermostat: operating temperature and weather",
+    "category": "devices"
+   },
+   {
+    "article_id": "KB-1087",
+    "title": "Lumen Doorbell Cam: operating temperature and weather",
+    "category": "devices"
+   },
+   {
+    "article_id": "KB-1088",
+    "title": "Lumen Light Strip: operating temperature and weather",
+    "category": "devices"
+   },
+   {
+    "article_id": "KB-1089",
+    "title": "Smart Lock: auto-lock and keypad codes",
+    "category": "devices"
+   },
+   {
+    "article_id": "KB-1090",
+    "title": "Thermostat: schedules and eco mode",
+    "category": "devices"
+   },
+   {
+    "article_id": "KB-1091",
+    "title": "Camera: person and package detection",
+    "category": "devices"
+   },
+   {
+    "article_id": "KB-1092",
+    "title": "Lumen for property managers",
+    "category": "business"
+   },
+   {
+    "article_id": "KB-1093",
+    "title": "Single sign-on (SSO) setup",
+    "category": "business"
+   },
+   {
+    "article_id": "KB-1094",
+    "title": "Audit logs",
+    "category": "business"
+   },
+   {
+    "article_id": "KB-1095",
+    "title": "Transferring devices to a new owner",
+    "category": "account"
+   },
+   {
+    "article_id": "KB-1096",
+    "title": "Changing the account email address",
+    "category": "account"
+   },
+   {
+    "article_id": "KB-1097",
+    "title": "Deleting your Lumen account",
+    "category": "account"
+   },
+   {
+    "article_id": "KB-1098",
+    "title": "Sunset automations run late",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1099",
+    "title": "Camera video is choppy or buffering",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1100",
+    "title": "Hub not detecting Zigbee devices",
+    "category": "troubleshooting"
+   },
+   {
+    "article_id": "KB-1101",
+    "title": "Specifications: Lumen Hub (White)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1102",
+    "title": "Specifications: Lumen Mounting Kit (White)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1103",
+    "title": "Specifications: Lumen Outdoor Plug (Slate)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1104",
+    "title": "Specifications: Lumen Room Sensor (Sand)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1105",
+    "title": "Specifications: Lumen Garage Controller (Slate)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1106",
+    "title": "Specifications: Lumen Dimmer (Slate)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1107",
+    "title": "Specifications: Lumen Temp Sensor (Slate)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1108",
+    "title": "Specifications: Lumen Cam Indoor 2 (Black)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1109",
+    "title": "Specifications: Lumen Hub Pro 2 (White)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1110",
+    "title": "Specifications: Lumen Solar Panel 2 (Graphite)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1111",
+    "title": "Specifications: Lumen Smart Plug 3 (Sand)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1112",
+    "title": "Specifications: Lumen Fan Controller 2 (White)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1113",
+    "title": "Specifications: Lumen Keypad 3 (Sand)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1114",
+    "title": "Specifications: Lumen Ceiling Panel 2 (Sand)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1115",
+    "title": "Specifications: Lumen Motion Sensor 3 (Sand)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1116",
+    "title": "Specifications: Lumen Cam Outdoor 3 (Black)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1117",
+    "title": "Specifications: Lumen Zigbee Bridge 3 (Slate)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1118",
+    "title": "Specifications: Lumen Battery Pack 3 (White)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1119",
+    "title": "Specifications: Lumen Energy Monitor Gen 4 (White)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1120",
+    "title": "Specifications: Lumen Thermostat Lite Gen 4 (Sand)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1121",
+    "title": "Specifications: Lumen Lock Pro Plus (Slate)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1122",
+    "title": "Specifications: Lumen Bulb A19 Gen 4 (Slate)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1123",
+    "title": "Specifications: Lumen Door Sensor Gen 4 (Sand)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1124",
+    "title": "Specifications: Lumen Cam Pro Gen 4 (Black)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1125",
+    "title": "Specifications: Lumen Hub Mini Plus (Sand)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1126",
+    "title": "Specifications: Lumen Ethernet Adapter Gen 4 (White)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1127",
+    "title": "Specifications: Lumen Power Strip Max (Slate)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1128",
+    "title": "Specifications: Lumen Smart Vent Plus (Slate)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1129",
+    "title": "Specifications: Lumen Smart Lock SE (White)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1130",
+    "title": "Specifications: Lumen Bulb A19 (Slate)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1131",
+    "title": "Specifications: Lumen Door Sensor (White)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1132",
+    "title": "Specifications: Lumen Cam Pro (Black)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1133",
+    "title": "Specifications: Lumen Bridge (Black)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1134",
+    "title": "Specifications: Lumen Ethernet Adapter (Graphite)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1135",
+    "title": "Specifications: Lumen Smart Plug 2 (White)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1136",
+    "title": "Specifications: Lumen Thermostat 2 (Sand)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1137",
+    "title": "Specifications: Lumen Keypad 2 (Slate)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1138",
+    "title": "Specifications: Lumen Bulb BR30 2 (Black)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1139",
+    "title": "Specifications: Lumen Leak Sensor 2 (Slate)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1140",
+    "title": "Specifications: Lumen Doorbell Cam 2 (Slate)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1141",
+    "title": "Specifications: Lumen Hub 3 (Sand)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1142",
+    "title": "Specifications: Lumen Wall Bracket 2 (White)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1143",
+    "title": "Specifications: Lumen Energy Monitor 3 (White)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1144",
+    "title": "Specifications: Lumen Room Sensor 3 (Slate)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1145",
+    "title": "Specifications: Lumen Lock Pro Gen 4 (White)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1146",
+    "title": "Specifications: Lumen Light Strip 3 (Slate)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1147",
+    "title": "Specifications: Lumen Smoke Sensor 3 (White)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1148",
+    "title": "Specifications: Lumen Floodlight Cam 3 (Black)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1149",
+    "title": "Specifications: Lumen Hub Pro Gen 4 (Graphite)",
+    "category": "specs"
+   },
+   {
+    "article_id": "KB-1150",
+    "title": "Specifications: Lumen Chime 3 (Sand)",
+    "category": "specs"
+   }
+  ],
+  "kb_injection_articles": [
+   "KB-1012",
+   "KB-1033",
+   "KB-1058",
+   "KB-1077",
+   "KB-1101",
+   "KB-1134"
+  ],
+  "kb_contradictions": [
+   [
+    "KB-1019",
+    "KB-1020",
+    "factory reset hold time 10s (outdated) vs 30s (current)"
+   ]
+  ]
+ },
+ "travel": {
+  "cities": [
+   {
+    "code": "JFK",
+    "city": "New York",
+    "country": "US"
+   },
+   {
+    "code": "LAX",
+    "city": "Los Angeles",
+    "country": "US"
+   },
+   {
+    "code": "ORD",
+    "city": "Chicago",
+    "country": "US"
+   },
+   {
+    "code": "SFO",
+    "city": "San Francisco",
+    "country": "US"
+   },
+   {
+    "code": "SEA",
+    "city": "Seattle",
+    "country": "US"
+   },
+   {
+    "code": "AUS",
+    "city": "Austin",
+    "country": "US"
+   },
+   {
+    "code": "BOS",
+    "city": "Boston",
+    "country": "US"
+   },
+   {
+    "code": "MIA",
+    "city": "Miami",
+    "country": "US"
+   },
+   {
+    "code": "DEN",
+    "city": "Denver",
+    "country": "US"
+   },
+   {
+    "code": "ATL",
+    "city": "Atlanta",
+    "country": "US"
+   },
+   {
+    "code": "YYZ",
+    "city": "Toronto",
+    "country": "CA"
+   },
+   {
+    "code": "YVR",
+    "city": "Vancouver",
+    "country": "CA"
+   },
+   {
+    "code": "MEX",
+    "city": "Mexico City",
+    "country": "MX"
+   },
+   {
+    "code": "GRU",
+    "city": "Sao Paulo",
+    "country": "BR"
+   },
+   {
+    "code": "EZE",
+    "city": "Buenos Aires",
+    "country": "AR"
+   },
+   {
+    "code": "LHR",
+    "city": "London",
+    "country": "GB"
+   },
+   {
+    "code": "CDG",
+    "city": "Paris",
+    "country": "FR"
+   },
+   {
+    "code": "FRA",
+    "city": "Frankfurt",
+    "country": "DE"
+   },
+   {
+    "code": "BER",
+    "city": "Berlin",
+    "country": "DE"
+   },
+   {
+    "code": "AMS",
+    "city": "Amsterdam",
+    "country": "NL"
+   },
+   {
+    "code": "MAD",
+    "city": "Madrid",
+    "country": "ES"
+   },
+   {
+    "code": "FCO",
+    "city": "Rome",
+    "country": "IT"
+   },
+   {
+    "code": "ZRH",
+    "city": "Zurich",
+    "country": "CH"
+   },
+   {
+    "code": "CPH",
+    "city": "Copenhagen",
+    "country": "DK"
+   },
+   {
+    "code": "DUB",
+    "city": "Dublin",
+    "country": "IE"
+   },
+   {
+    "code": "LIS",
+    "city": "Lisbon",
+    "country": "PT"
+   },
+   {
+    "code": "WAW",
+    "city": "Warsaw",
+    "country": "PL"
+   },
+   {
+    "code": "IST",
+    "city": "Istanbul",
+    "country": "TR"
+   },
+   {
+    "code": "DXB",
+    "city": "Dubai",
+    "country": "AE"
+   },
+   {
+    "code": "BOM",
+    "city": "Mumbai",
+    "country": "IN"
+   },
+   {
+    "code": "DEL",
+    "city": "Delhi",
+    "country": "IN"
+   },
+   {
+    "code": "BLR",
+    "city": "Bengaluru",
+    "country": "IN"
+   },
+   {
+    "code": "SIN",
+    "city": "Singapore",
+    "country": "SG"
+   },
+   {
+    "code": "HKG",
+    "city": "Hong Kong",
+    "country": "HK"
+   },
+   {
+    "code": "NRT",
+    "city": "Tokyo",
+    "country": "JP"
+   },
+   {
+    "code": "ICN",
+    "city": "Seoul",
+    "country": "KR"
+   },
+   {
+    "code": "SYD",
+    "city": "Sydney",
+    "country": "AU"
+   },
+   {
+    "code": "AKL",
+    "city": "Auckland",
+    "country": "NZ"
+   },
+   {
+    "code": "JNB",
+    "city": "Johannesburg",
+    "country": "ZA"
+   },
+   {
+    "code": "NBO",
+    "city": "Nairobi",
+    "country": "KE"
+   }
+  ],
+  "sample_hotels": {
+   "JFK": [
+    "HT-JFK-01",
+    "HT-JFK-02",
+    "HT-JFK-03"
+   ],
+   "LAX": [
+    "HT-LAX-01",
+    "HT-LAX-02",
+    "HT-LAX-03"
+   ],
+   "ORD": [
+    "HT-ORD-01",
+    "HT-ORD-02",
+    "HT-ORD-03"
+   ],
+   "SFO": [
+    "HT-SFO-01",
+    "HT-SFO-02",
+    "HT-SFO-03"
+   ],
+   "SEA": [
+    "HT-SEA-01",
+    "HT-SEA-02",
+    "HT-SEA-03"
+   ],
+   "AUS": [
+    "HT-AUS-01",
+    "HT-AUS-02",
+    "HT-AUS-03"
+   ]
+  },
+  "flight_offer_id_format": "FL-<ORIGIN>-<DEST>-<YYYYMMDD>-<n><cabin Y|W|J|F>",
+  "bookable_window": [
+   "2026-11-13",
+   "AS_OF + 330 days"
+  ]
+ },
+ "finance": {
+  "tickers": [
+   {
+    "symbol": "LMNC",
+    "name": "Lumen & Co",
+    "sector": "Consumer Electronics"
+   },
+   {
+    "symbol": "ACRV",
+    "name": "Acrevia Systems",
+    "sector": "Software"
+   },
+   {
+    "symbol": "BRKN",
+    "name": "Brookline Energy",
+    "sector": "Utilities"
+   },
+   {
+    "symbol": "CRDX",
+    "name": "Cardiox Therapeutics",
+    "sector": "Biotech"
+   },
+   {
+    "symbol": "DLTA",
+    "name": "Deltaform Materials",
+    "sector": "Materials"
+   },
+   {
+    "symbol": "ELVN",
+    "name": "Elevenpoint Media",
+    "sector": "Media"
+   },
+   {
+    "symbol": "FRNT",
+    "name": "Frontier Rail",
+    "sector": "Industrials"
+   },
+   {
+    "symbol": "GLDN",
+    "name": "Goldenrod Foods",
+    "sector": "Consumer Staples"
+   },
+   {
+    "symbol": "HLX",
+    "name": "Helix Robotics",
+    "sector": "Industrials"
+   },
+   {
+    "symbol": "IONQX",
+    "name": "Ionique Quantum",
+    "sector": "Technology"
+   },
+   {
+    "symbol": "JADE",
+    "name": "Jade Harbor Bank",
+    "sector": "Financials"
+   },
+   {
+    "symbol": "KNTC",
+    "name": "Kinetica Motors",
+    "sector": "Automotive"
+   },
+   {
+    "symbol": "LUMA",
+    "name": "Lumacore Semiconductors",
+    "sector": "Semiconductors"
+   },
+   {
+    "symbol": "MRDN",
+    "name": "Meridian Health",
+    "sector": "Healthcare"
+   },
+   {
+    "symbol": "NOVA",
+    "name": "Novaterra Mining",
+    "sector": "Materials"
+   },
+   {
+    "symbol": "ORBT",
+    "name": "Orbital Logistics",
+    "sector": "Industrials"
+   },
+   {
+    "symbol": "PRSM",
+    "name": "Prism Analytics",
+    "sector": "Software"
+   },
+   {
+    "symbol": "QNTM",
+    "name": "Quantum Leaf Pharma",
+    "sector": "Biotech"
+   },
+   {
+    "symbol": "RDGE",
+    "name": "Ridgeline Outdoor",
+    "sector": "Consumer Discretionary"
+   },
+   {
+    "symbol": "SLRX",
+    "name": "Solarix Power",
+    "sector": "Energy"
+   },
+   {
+    "symbol": "TRVL",
+    "name": "Travelwise Group",
+    "sector": "Travel"
+   },
+   {
+    "symbol": "UMBR",
+    "name": "Umbra Security",
+    "sector": "Software"
+   },
+   {
+    "symbol": "VRDN",
+    "name": "Verdant Agriculture",
+    "sector": "Consumer Staples"
+   },
+   {
+    "symbol": "WAVE",
+    "name": "Wavecrest Telecom",
+    "sector": "Telecom"
+   },
+   {
+    "symbol": "XENO",
+    "name": "Xenon Aerospace",
+    "sector": "Aerospace"
+   },
+   {
+    "symbol": "YLDS",
+    "name": "Yieldstone REIT",
+    "sector": "Real Estate"
+   },
+   {
+    "symbol": "ZPHR",
+    "name": "Zephyr Airlines",
+    "sector": "Travel"
+   },
+   {
+    "symbol": "AQUA",
+    "name": "Aquila Water",
+    "sector": "Utilities"
+   },
+   {
+    "symbol": "BLZE",
+    "name": "Blaze Gaming",
+    "sector": "Media"
+   },
+   {
+    "symbol": "CSTL",
+    "name": "Castle Insurance",
+    "sector": "Financials"
+   },
+   {
+    "symbol": "DRFT",
+    "name": "Driftwood Retail",
+    "sector": "Consumer Discretionary"
+   },
+   {
+    "symbol": "EMBR",
+    "name": "Ember Restaurants",
+    "sector": "Consumer Discretionary"
+   },
+   {
+    "symbol": "FLUX",
+    "name": "Fluxion Cloud",
+    "sector": "Software"
+   },
+   {
+    "symbol": "GRVT",
+    "name": "Gravitas Capital",
+    "sector": "Financials"
+   },
+   {
+    "symbol": "HRBR",
+    "name": "Harbor Shipping",
+    "sector": "Industrials"
+   },
+   {
+    "symbol": "INKD",
+    "name": "Inkwell Publishing",
+    "sector": "Media"
+   },
+   {
+    "symbol": "JOLT",
+    "name": "Jolt Beverages",
+    "sector": "Consumer Staples"
+   },
+   {
+    "symbol": "KRYO",
+    "name": "Kryo Biologics",
+    "sector": "Biotech"
+   },
+   {
+    "symbol": "LTHM",
+    "name": "Lithium Mesa",
+    "sector": "Materials"
+   },
+   {
+    "symbol": "MOSS",
+    "name": "Mossgreen Paper",
+    "sector": "Materials"
+   },
+   {
+    "symbol": "NBLA",
+    "name": "Nebula Networks",
+    "sector": "Technology"
+   },
+   {
+    "symbol": "OPAL",
+    "name": "Opaline Cosmetics",
+    "sector": "Consumer Staples"
+   },
+   {
+    "symbol": "PLSE",
+    "name": "Pulse Medical Devices",
+    "sector": "Healthcare"
+   },
+   {
+    "symbol": "QRTZ",
+    "name": "Quartz Timepieces",
+    "sector": "Consumer Discretionary"
+   },
+   {
+    "symbol": "RVTN",
+    "name": "Riverton Homes",
+    "sector": "Real Estate"
+   },
+   {
+    "symbol": "SPRK",
+    "name": "Sparkline Ads",
+    "sector": "Media"
+   },
+   {
+    "symbol": "TNDR",
+    "name": "Tundra Freight",
+    "sector": "Industrials"
+   },
+   {
+    "symbol": "ULTR",
+    "name": "Ultraviolet Optics",
+    "sector": "Technology"
+   },
+   {
+    "symbol": "VYGR",
+    "name": "Voyager Space Tours",
+    "sector": "Travel"
+   },
+   {
+    "symbol": "WLDR",
+    "name": "Wildridge Apparel",
+    "sector": "Consumer Discretionary"
+   },
+   {
+    "symbol": "AAPL",
+    "name": "Apple Inc. (synthetic prices)",
+    "sector": "Technology"
+   },
+   {
+    "symbol": "MSFT",
+    "name": "Microsoft Corp. (synthetic prices)",
+    "sector": "Software"
+   },
+   {
+    "symbol": "NVDA",
+    "name": "NVIDIA Corp. (synthetic prices)",
+    "sector": "Semiconductors"
+   },
+   {
+    "symbol": "GOOGL",
+    "name": "Alphabet Inc. (synthetic prices)",
+    "sector": "Technology"
+   },
+   {
+    "symbol": "AMZN",
+    "name": "Amazon.com Inc. (synthetic prices)",
+    "sector": "Consumer Discretionary"
+   },
+   {
+    "symbol": "TSLA",
+    "name": "Tesla Inc. (synthetic prices)",
+    "sector": "Automotive"
+   }
+  ],
+  "data_range": [
+   "2023-01-02",
+   "2026-11-13"
+  ],
+  "messy": {
+   "split": {
+    "symbol": "KNTC",
+    "date": "2025-06-02",
+    "ratio": "4-for-1"
+   },
+   "halt": {
+    "symbol": "CRDX",
+    "from": "2026-03-09",
+    "to": "2026-03-20"
+   },
+   "missing_eps": [
+    "ACRV",
+    "GLDN",
+    "PRSM",
+    "UMBR",
+    "VRDN",
+    "EMBR",
+    "SPRK",
+    "ULTR"
+   ]
+  }
+ },
+ "hr": {
+  "employees": [
+   {
+    "employee_id": "EMP-001",
+    "name": "Kofi Wang",
+    "title": "Chief Executive Officer",
+    "department": "Executive",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-002",
+    "name": "Lars Sharma",
+    "title": "Chief Technology Officer",
+    "department": "Executive",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-003",
+    "name": "Andre Ivanova",
+    "title": "Chief Financial Officer",
+    "department": "Executive",
+    "office": "Berlin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-004",
+    "name": "Grace Campbell",
+    "title": "Chief Operating Officer",
+    "department": "Executive",
+    "office": "Toronto",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-005",
+    "name": "Grace Thomas",
+    "title": "Engineering Manager",
+    "department": "Engineering",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-006",
+    "name": "Hannah Brown",
+    "title": "Staff Engineer",
+    "department": "Engineering",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-007",
+    "name": "Sean Hernandez",
+    "title": "SRE",
+    "department": "Engineering",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-008",
+    "name": "Samuel Hansen",
+    "title": "Senior Software Engineer",
+    "department": "Engineering",
+    "office": "Berlin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-009",
+    "name": "Lucia Clark",
+    "title": "Software Engineer",
+    "department": "Engineering",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-010",
+    "name": "Ingrid Mueller",
+    "title": "Firmware Engineer",
+    "department": "Engineering",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-011",
+    "name": "Freya Kowalski",
+    "title": "Software Engineer",
+    "department": "Engineering",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-012",
+    "name": "Jonas Taylor",
+    "title": "Staff Engineer",
+    "department": "Engineering",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-013",
+    "name": "Siobhan Young",
+    "title": "SRE",
+    "department": "Engineering",
+    "office": "Austin",
+    "status": "on_leave"
+   },
+   {
+    "employee_id": "EMP-014",
+    "name": "Nia Haddad",
+    "title": "Software Engineer",
+    "department": "Engineering",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-015",
+    "name": "Anya Hernandez",
+    "title": "Senior Software Engineer",
+    "department": "Engineering",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-016",
+    "name": "Elena Singh",
+    "title": "QA Engineer",
+    "department": "Engineering",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-017",
+    "name": "Benjamin White",
+    "title": "Senior Software Engineer",
+    "department": "Engineering",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-018",
+    "name": "Kofi Roberts",
+    "title": "Firmware Engineer",
+    "department": "Engineering",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-019",
+    "name": "Hiroshi Moore",
+    "title": "Firmware Engineer",
+    "department": "Engineering",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-020",
+    "name": "Noah Adams",
+    "title": "SRE",
+    "department": "Engineering",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-021",
+    "name": "Kwame Harris",
+    "title": "QA Engineer",
+    "department": "Engineering",
+    "office": null,
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-022",
+    "name": "Amara Anderson",
+    "title": "Staff Engineer",
+    "department": "Engineering",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-023",
+    "name": "Raj Murphy",
+    "title": "Staff Engineer",
+    "department": "Engineering",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-024",
+    "name": "Priya Okafor",
+    "title": "Software Engineer",
+    "department": "Engineering",
+    "office": "Toronto",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-025",
+    "name": "Sara Dubois",
+    "title": "Support Manager",
+    "department": "Support",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-026",
+    "name": "James Ivanova",
+    "title": "Support Team Lead",
+    "department": "Support",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-027",
+    "name": "Emma Chen",
+    "title": "Support Specialist",
+    "department": "Support",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-028",
+    "name": "Priya Murphy",
+    "title": "Senior Support Specialist",
+    "department": "Support",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-029",
+    "name": "Amara Lopez",
+    "title": "Senior Support Specialist",
+    "department": "Support",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-030",
+    "name": "Anya Mitchell",
+    "title": "Senior Support Specialist",
+    "department": "Support",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-031",
+    "name": "Elena King",
+    "title": "Senior Support Specialist",
+    "department": "Support",
+    "office": "Remote",
+    "status": "terminated"
+   },
+   {
+    "employee_id": "EMP-032",
+    "name": "Zofia Nelson",
+    "title": "Senior Support Specialist",
+    "department": "Support",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-033",
+    "name": "Raj Roberts",
+    "title": "Senior Support Specialist",
+    "department": "Support",
+    "office": "Berlin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-034",
+    "name": "Olivia Mitchell",
+    "title": "Support Specialist",
+    "department": "Support",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-035",
+    "name": "Beatriz Mensah",
+    "title": "Support Specialist",
+    "department": "Support",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-036",
+    "name": "Freya Allen",
+    "title": "Support Team Lead",
+    "department": "Support",
+    "office": "Toronto",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-037",
+    "name": "Isabella Jackson",
+    "title": "Support Team Lead",
+    "department": "Support",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-038",
+    "name": "Priya Kowalski",
+    "title": "Support Specialist",
+    "department": "Support",
+    "office": "Berlin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-039",
+    "name": "Lars Johnson",
+    "title": "Support Team Lead",
+    "department": "Support",
+    "office": "Berlin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-040",
+    "name": "Amara Khan",
+    "title": "Sales Director",
+    "department": "Sales",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-041",
+    "name": "Yuki Green",
+    "title": "Channel Partner Manager",
+    "department": "Sales",
+    "office": "Toronto",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-042",
+    "name": "Camille Murphy",
+    "title": "Channel Partner Manager",
+    "department": "Sales",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-043",
+    "name": "Chloe O'Brien",
+    "title": "Sales Development Rep",
+    "department": "Sales",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-044",
+    "name": "Benjamin Roberts",
+    "title": "Channel Partner Manager",
+    "department": "Sales",
+    "office": "Berlin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-045",
+    "name": "Carlos Patel",
+    "title": "Account Executive",
+    "department": "Sales",
+    "office": "Toronto",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-046",
+    "name": "Camille Patel",
+    "title": "Channel Partner Manager",
+    "department": "Sales",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-047",
+    "name": "Jonas Sato",
+    "title": "Sales Development Rep",
+    "department": "Sales",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-048",
+    "name": "Ethan Hill",
+    "title": "Channel Partner Manager",
+    "department": "Sales",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-049",
+    "name": "Zoe Lewis",
+    "title": "Channel Partner Manager",
+    "department": "Sales",
+    "office": "Remote",
+    "status": "on_leave"
+   },
+   {
+    "employee_id": "EMP-050",
+    "name": "Anya Clark",
+    "title": "Operations Manager",
+    "department": "Operations",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-051",
+    "name": "Andre Jackson",
+    "title": "Logistics Coordinator",
+    "department": "Operations",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-052",
+    "name": "Lars Adams",
+    "title": "Supply Chain Analyst",
+    "department": "Operations",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-053",
+    "name": "Raj Mitchell",
+    "title": "Logistics Coordinator",
+    "department": "Operations",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-054",
+    "name": "Siobhan Bianchi",
+    "title": "Supply Chain Analyst",
+    "department": "Operations",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-055",
+    "name": "Tomasz Murphy",
+    "title": "Supply Chain Analyst",
+    "department": "Operations",
+    "office": "Toronto",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-056",
+    "name": "Wei Petrov",
+    "title": "Logistics Coordinator",
+    "department": "Operations",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-057",
+    "name": "Mia King",
+    "title": "Supply Chain Analyst",
+    "department": "Operations",
+    "office": "Berlin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-058",
+    "name": "Kofi King",
+    "title": "Logistics Coordinator",
+    "department": "Operations",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-059",
+    "name": "Ava Scott",
+    "title": "Logistics Coordinator",
+    "department": "Operations",
+    "office": "Berlin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-060",
+    "name": "Emma Young",
+    "title": "Marketing Director",
+    "department": "Marketing",
+    "office": "Berlin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-061",
+    "name": "Daniel Okafor",
+    "title": "Growth Marketer",
+    "department": "Marketing",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-062",
+    "name": "Giulia Scott",
+    "title": "Content Marketer",
+    "department": "Marketing",
+    "office": "Austin",
+    "status": "terminated"
+   },
+   {
+    "employee_id": "EMP-063",
+    "name": "Elena Allen",
+    "title": "Content Marketer",
+    "department": "Marketing",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-064",
+    "name": "Raj Hernandez",
+    "title": "Growth Marketer",
+    "department": "Marketing",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-065",
+    "name": "Mei Rossi",
+    "title": "Content Marketer",
+    "department": "Marketing",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-066",
+    "name": "Olivia Mitchell",
+    "title": "Finance Director",
+    "department": "Finance",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-067",
+    "name": "Camille Okafor",
+    "title": "FP&A Analyst",
+    "department": "Finance",
+    "office": "Toronto",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-068",
+    "name": "James Chen",
+    "title": "Accountant",
+    "department": "Finance",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-069",
+    "name": "Yuki Adams",
+    "title": "Payroll Specialist",
+    "department": "Finance",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-070",
+    "name": "Yuki Martinez",
+    "title": "Accountant",
+    "department": "Finance",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-071",
+    "name": "Mei King",
+    "title": "FP&A Analyst",
+    "department": "Finance",
+    "office": null,
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-072",
+    "name": "Marco Nguyen",
+    "title": "Head of Product",
+    "department": "Product",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-073",
+    "name": "Aisha Petrov",
+    "title": "Product Manager",
+    "department": "Product",
+    "office": "Berlin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-074",
+    "name": "Ananya Clark",
+    "title": "Product Designer",
+    "department": "Product",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-075",
+    "name": "Benjamin Lopez",
+    "title": "Product Designer",
+    "department": "Product",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-076",
+    "name": "Elena Campbell",
+    "title": "Product Manager",
+    "department": "Product",
+    "office": "Remote",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-077",
+    "name": "Raj Baker",
+    "title": "HR Director",
+    "department": "HR",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-078",
+    "name": "Raj Roberts",
+    "title": "HR Business Partner",
+    "department": "HR",
+    "office": "Toronto",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-079",
+    "name": "Marco Silva",
+    "title": "HR Business Partner",
+    "department": "HR",
+    "office": "Austin",
+    "status": "active"
+   },
+   {
+    "employee_id": "EMP-080",
+    "name": "Layla Green",
+    "title": "People Ops Specialist",
+    "department": "HR",
+    "office": "Remote",
+    "status": "active"
+   }
+  ],
+  "policy_ids": [
+   "pto",
+   "sick-leave",
+   "parental-leave",
+   "remote-work",
+   "expense",
+   "travel-2024",
+   "travel-2026",
+   "equipment",
+   "code-of-conduct",
+   "security-passwords",
+   "data-retention",
+   "customer-refunds",
+   "holidays-2026",
+   "overtime",
+   "onboarding"
+  ],
+  "messy": {
+   "terminated": [
+    "EMP-031",
+    "EMP-062"
+   ],
+   "on_leave": [
+    "EMP-013",
+    "EMP-049"
+   ],
+   "missing_office": [
+    "EMP-021",
+    "EMP-071"
+   ],
+   "manager_terminated": [
+    "EMP-032"
+   ],
+   "policy_conflict": [
+    "travel-2024",
+    "travel-2026"
+   ]
+  }
+ },
+ "sql": {
+  "databases": [
+   "chinook",
+   "northwind"
+  ]
+ }
+}

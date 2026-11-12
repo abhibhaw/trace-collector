@@ -1,0 +1,4 @@
+{"task_id": "t002", "trace_id": "6c23b1e89245c610de194588654f0c1d", "status": "error", "latency_s": 4.48, "error": "TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'"}
+{"task_id": "t003", "trace_id": "febab1053e797d1ed5cffad7215bf212", "status": "ok", "latency_s": 18.51}
+{"task_id": "t001", "trace_id": "3f84c30367a80495a6ab5a0d3d8c585c", "status": "ok", "latency_s": 22.33}
+{"task_id": "t002", "trace_id": "98052b57ba4ff8cf2b7ea65d3efaad02", "status": "ok", "latency_s": 15.22}

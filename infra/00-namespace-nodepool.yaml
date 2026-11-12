@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: experiments
+  labels: {purpose: peira-trace-collection}
+---
+apiVersion: karpenter.sh/v1
+kind: NodePool
+metadata:
+  name: experiments
+  labels: {app: peira-experiments}
+spec:
+  disruption:
+    consolidateAfter: 10m
+    consolidationPolicy: WhenEmptyOrUnderutilized
+  limits:
+    cpu: "32"
+  template:
+    metadata:
+      labels: {peira.tech/pool: experiments}
+    spec:
+      expireAfter: 168h
+      nodeClassRef: {group: karpenter.azure.com, kind: AKSNodeClass, name: default}
+      requirements:
+      - {key: kubernetes.io/arch, operator: In, values: [arm64]}
+      - {key: kubernetes.io/os, operator: In, values: [linux]}
+      - {key: karpenter.sh/capacity-type, operator: In, values: [on-demand]}
+      - {key: karpenter.azure.com/sku-family, operator: In, values: [D]}
+      taints:
+      - {effect: NoSchedule, key: peira.tech/experiments, value: "true"}
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata: {name: experiments-quota, namespace: experiments}
+spec:
+  hard:
+    requests.cpu: "28"
+    requests.memory: 96Gi
+    limits.memory: 128Gi
+    pods: "120"
+---
+apiVersion: v1
+kind: LimitRange
+metadata: {name: experiments-defaults, namespace: experiments}
+spec:
+  limits:
+  - type: Container
+    default: {cpu: "1", memory: 1Gi}
+    defaultRequest: {cpu: 100m, memory: 256Mi}

@@ -1,0 +1,1 @@
+{"task_id": "t001", "trace_id": "76102ee39fa5e840b0f0811dbab13dbb", "status": "error", "latency_s": 123.66, "error": "PipelineRuntimeError: The following component failed to run:\nComponent name: 'ticket_viewer'\nComponent type: 'TicketViewer'\nError: tools service call tickets_get failed after 4 attempts: ReadError: [Errno 54] Connection reset by peer"}

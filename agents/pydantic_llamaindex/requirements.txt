@@ -1,0 +1,16 @@
+# pydantic_llamaindex family: PydanticAI (pyd-*) and LlamaIndex (li-*) share one venv.
+# Install: uv pip install -p agents/pydantic_llamaindex/.venv -r agents/pydantic_llamaindex/requirements.txt -e harness
+langfuse==5.2.0
+# PydanticAI with the Anthropic provider. Tracing: built-in OTel instrumentation (no logfire account).
+pydantic-ai-slim[anthropic]==2.68.0
+pydantic-graph==2.68.0
+anthropic==1.17.0  # 2.x turned MessageParam into a Union, which breaks llama-index-llms-anthropic 0.12.3
+# LlamaIndex with the Anthropic LLM. Tracing: OpenInference. No embedding packages: retrieval is tool-based.
+llama-index-core==0.14.25
+llama-index-llms-anthropic==0.12.3
+llama-index-workflows==2.26.1
+openinference-instrumentation-llama-index==4.7.5
+openinference-semantic-conventions==0.1.44
+opentelemetry-api==1.45.2
+opentelemetry-sdk==1.45.2
+httpx==0.28.1

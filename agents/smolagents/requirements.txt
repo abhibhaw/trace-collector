@@ -1,0 +1,10 @@
+# smolagents family. Install with:
+#   uv pip install -p agents/smolagents/.venv -r agents/smolagents/requirements.txt -e harness
+smolagents[litellm]==1.26.0
+litellm==1.109.1
+openinference-instrumentation-smolagents==0.1.49
+openinference-instrumentation==0.1.77
+tenacity==9.2.1
+pandas==3.1.1
+numpy==2.5.4
+sympy==1.14.0

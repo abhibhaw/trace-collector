@@ -1,0 +1,6 @@
+{"task_id": "t001", "trace_id": "e2c0b19332d107297ab4baba0bbd9ce2", "status": "ok", "latency_s": 24.96}
+{"task_id": "t003", "trace_id": "cc6dadd2f42be8da5581b1dd56802e4c", "status": "ok", "latency_s": 37.29}
+{"task_id": "t002", "trace_id": "5ef9c532a4ff43a06385665f67d49980", "status": "ok", "latency_s": 38.99}
+{"task_id": "t001", "trace_id": "d43e463a0331b2a1e683affda749f16c", "status": "ok", "latency_s": 39.0}
+{"task_id": "t002", "trace_id": "80d2329928a9a37b55e8a3c0965a7e99", "status": "ok", "latency_s": 46.92}
+{"task_id": "t003", "trace_id": "2f80e3407da4bcb82db33fcd69be453a", "status": "ok", "latency_s": 56.04}

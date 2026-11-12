@@ -1,0 +1,4 @@
+openai-agents==0.24.0
+openai==3.49.0
+openinference-instrumentation-openai-agents==2.8.2
+openinference-instrumentation==0.1.77

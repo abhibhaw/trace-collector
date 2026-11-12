@@ -1,0 +1,50 @@
+# Postgres for LiteLLM spend/key storage. Password from secret litellm-secrets/POSTGRES_PASSWORD.
+apiVersion: v1
+kind: Service
+metadata: {name: litellm-postgres, namespace: experiments, labels: {app: litellm-postgres}}
+spec:
+  selector: {app: litellm-postgres}
+  ports: [{name: postgres, port: 5432, targetPort: 5432}]
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata: {name: litellm-postgres, namespace: experiments, labels: {app: litellm-postgres}}
+spec:
+  serviceName: litellm-postgres
+  replicas: 1
+  selector: {matchLabels: {app: litellm-postgres}}
+  template:
+    metadata: {labels: {app: litellm-postgres}}
+    spec:
+      nodeSelector: {peira.tech/pool: experiments}
+      tolerations: [{key: peira.tech/experiments, operator: Equal, value: "true", effect: NoSchedule}]
+      securityContext: {fsGroup: 999}
+      containers:
+        - name: postgres
+          image: postgres:16
+          ports: [{containerPort: 5432, name: postgres}]
+          env:
+            - {name: POSTGRES_USER, value: litellm}
+            - {name: POSTGRES_DB, value: litellm}
+            - name: POSTGRES_PASSWORD
+              valueFrom: {secretKeyRef: {name: litellm-secrets, key: POSTGRES_PASSWORD}}
+            # Azure disks contain lost+found; initdb needs an empty dir.
+            - {name: PGDATA, value: /var/lib/postgresql/data/pgdata}
+          args: ["-c", "max_connections=200"]
+          resources:
+            requests: {cpu: 250m, memory: 512Mi}
+            limits: {memory: 1Gi}
+          readinessProbe:
+            exec: {command: ["pg_isready", "-U", "litellm", "-d", "litellm"]}
+            periodSeconds: 5
+          livenessProbe:
+            exec: {command: ["pg_isready", "-U", "litellm", "-d", "litellm"]}
+            initialDelaySeconds: 30
+            periodSeconds: 20
+          volumeMounts: [{name: data, mountPath: /var/lib/postgresql/data}]
+  volumeClaimTemplates:
+    - metadata: {name: data}
+      spec:
+        accessModes: [ReadWriteOnce]
+        storageClassName: managed-csi
+        resources: {requests: {storage: 5Gi}}

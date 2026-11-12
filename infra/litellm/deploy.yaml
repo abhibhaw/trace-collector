@@ -1,0 +1,67 @@
+# LiteLLM proxy. ConfigMap litellm-config is created from config.yaml by install.sh.
+apiVersion: v1
+kind: Service
+metadata: {name: litellm, namespace: experiments, labels: {app: litellm}}
+spec:
+  selector: {app: litellm}
+  ports: [{name: http, port: 4000, targetPort: 4000}]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: litellm, namespace: experiments, labels: {app: litellm}}
+spec:
+  replicas: 3
+  selector: {matchLabels: {app: litellm}}
+  strategy: {type: RollingUpdate, rollingUpdate: {maxUnavailable: 0, maxSurge: 1}}
+  template:
+    metadata: {labels: {app: litellm}}
+    spec:
+      nodeSelector: {peira.tech/pool: experiments}
+      tolerations: [{key: peira.tech/experiments, operator: Equal, value: "true", effect: NoSchedule}]
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 50
+              podAffinityTerm:
+                topologyKey: kubernetes.io/hostname
+                labelSelector: {matchLabels: {app: litellm}}
+      containers:
+        - name: litellm
+          # v1.109.1 multi-arch index (linux/amd64 + linux/arm64), pinned by digest.
+          image: ghcr.io/berriai/litellm:v1.109.1@sha256:11175975a3093e05e92faee2fe2fe3412a3ae2fcaa849eb0fe25d5f0d8bcb2e9
+          args: ["--config", "/etc/litellm/config.yaml", "--port", "4000", "--num_workers", "2"]
+          ports: [{containerPort: 4000, name: http}]
+          env:
+            - name: ANTHROPIC_API_KEY
+              valueFrom: {secretKeyRef: {name: llm-keys, key: ANTHROPIC_API_KEY, optional: true}}
+            - name: LITELLM_MASTER_KEY
+              valueFrom: {secretKeyRef: {name: litellm-secrets, key: LITELLM_MASTER_KEY}}
+            - name: POSTGRES_PASSWORD
+              valueFrom: {secretKeyRef: {name: litellm-secrets, key: POSTGRES_PASSWORD}}
+            - name: DATABASE_URL
+              value: postgresql://litellm:$(POSTGRES_PASSWORD)@litellm-postgres:5432/litellm
+            - {name: STORE_MODEL_IN_DB, value: "False"}
+            - {name: LITELLM_TELEMETRY_DISABLED, value: "true"}
+            - {name: LITELLM_LOG, value: "INFO"}
+            - {name: LITELLM_MODE, value: "PRODUCTION"}
+            - {name: DISABLE_ADMIN_UI, value: "True"}
+          resources:
+            requests: {cpu: 500m, memory: 1536Mi}
+            limits: {memory: 4Gi}
+          startupProbe:
+            httpGet: {path: /health/liveliness, port: 4000}
+            periodSeconds: 5
+            failureThreshold: 60
+          readinessProbe:
+            httpGet: {path: /health/readiness, port: 4000}
+            periodSeconds: 10
+            timeoutSeconds: 5
+          livenessProbe:
+            httpGet: {path: /health/liveliness, port: 4000}
+            periodSeconds: 20
+            timeoutSeconds: 5
+            failureThreshold: 5
+          volumeMounts: [{name: config, mountPath: /etc/litellm}]
+      volumes:
+        - name: config
+          configMap: {name: litellm-config}

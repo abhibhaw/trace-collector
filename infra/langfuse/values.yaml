@@ -1,0 +1,170 @@
+# Langfuse (chart langfuse/langfuse 2.2.4, app 4.77.0) for the `experiments` namespace.
+# This file holds NO secret values. Every credential comes from a Secret that
+# install.sh creates with `openssl rand` (see README.md for the list).
+# ClickHouse is NOT deployed by this chart (it needs the cluster-wide operator);
+# it is our own single-node StatefulSet in clickhouse.yaml.
+
+# Release name is `langfuse`; pin the fullname so the web Service is always `langfuse-web`.
+fullnameOverride: langfuse
+
+global:
+  seaweedfs:
+    # Do not create cluster-scoped RBAC (ClusterRole / ClusterRoleBinding).
+    createClusterRole: false
+
+langfuse:
+  logging:
+    level: info
+    format: json
+
+  salt:
+    secretKeyRef: {name: langfuse-app-secrets, key: salt}
+  encryptionKey:
+    secretKeyRef: {name: langfuse-app-secrets, key: encryption-key}
+  nextauth:
+    url: http://localhost:3000   # UI is reached via `kubectl port-forward`
+    secret:
+      secretKeyRef: {name: langfuse-app-secrets, key: nextauth-secret}
+
+  features:
+    telemetryEnabled: false
+    signUpDisabled: true
+    experimentalFeaturesEnabled: false
+
+  # Scheduling for web + worker (global fallback for both).
+  nodeSelector: {peira.tech/pool: experiments}
+  tolerations:
+    - {key: peira.tech/experiments, operator: Equal, value: "true", effect: NoSchedule}
+
+  image:
+    pullPolicy: IfNotPresent
+
+  # Shared Karpenter pool: never evict single-replica stateful/ingest pods for consolidation.
+  pod:
+    annotations: {karpenter.sh/do-not-disrupt: "true"}
+
+  web:
+    replicas: 1
+    # Startup (migrations + Next.js init) peaked above 2Gi and was OOMKilled; steady state is ~0.7Gi.
+    resources:
+      requests: {cpu: 500m, memory: 1536Mi}
+      limits: {cpu: "1", memory: 4Gi}
+    pdb:
+      create: false
+    # First boot runs Postgres + ClickHouse migrations before /api/public/health answers.
+    livenessProbe:
+      initialDelaySeconds: 180
+    pod:
+      # Headless init: org, project, API keys and admin user exist on first boot.
+      additionalEnv:
+        - {name: LANGFUSE_INIT_ORG_ID, value: peira}
+        - {name: LANGFUSE_INIT_ORG_NAME, value: peira}
+        - {name: LANGFUSE_INIT_PROJECT_ID, value: peira-traces}
+        - {name: LANGFUSE_INIT_PROJECT_NAME, value: peira-traces}
+        - name: LANGFUSE_INIT_PROJECT_PUBLIC_KEY
+          valueFrom: {secretKeyRef: {name: langfuse-app-secrets, key: init-public-key}}
+        - name: LANGFUSE_INIT_PROJECT_SECRET_KEY
+          valueFrom: {secretKeyRef: {name: langfuse-app-secrets, key: init-secret-key}}
+        - {name: LANGFUSE_INIT_USER_EMAIL, value: admin@peira.local}
+        - {name: LANGFUSE_INIT_USER_NAME, value: admin}
+        - name: LANGFUSE_INIT_USER_PASSWORD
+          valueFrom: {secretKeyRef: {name: langfuse-app-secrets, key: init-user-password}}
+
+  worker:
+    replicas: 1
+    resources:
+      requests: {cpu: 500m, memory: 1Gi}
+      limits: {cpu: "1", memory: 3Gi}
+    pdb:
+      create: false
+
+postgresql:
+  deploy: true
+  auth:
+    username: langfuse
+    database: langfuse
+    existingSecret: langfuse-pg-auth
+    secretKeys:
+      userPasswordKey: USERDB_PASSWORD
+  settings:
+    existingSecret: langfuse-pg-auth
+  userDatabase:
+    existingSecret: langfuse-pg-auth
+  storage:
+    requestedSize: 10Gi
+    className: managed-csi
+  resources:
+    requests: {cpu: 250m, memory: 512Mi}
+    limits: {cpu: "1", memory: 1Gi}
+  podAnnotations: {karpenter.sh/do-not-disrupt: "true"}
+  nodeSelector: {peira.tech/pool: experiments}
+  tolerations:
+    - {key: peira.tech/experiments, operator: Equal, value: "true", effect: NoSchedule}
+
+redis:
+  deploy: true
+  auth:
+    enabled: true
+    username: default
+    existingSecret: langfuse-valkey-auth
+    existingSecretPasswordKey: default
+    usersExistingSecret: langfuse-valkey-auth
+  dataStorage:
+    enabled: true
+    requestedSize: 5Gi
+    className: managed-csi
+  deploymentStrategy: Recreate   # RWO volume: never run two pods at once
+  resources:
+    requests: {cpu: 100m, memory: 256Mi}
+    limits: {cpu: 500m, memory: 512Mi}
+  podAnnotations: {karpenter.sh/do-not-disrupt: "true"}
+  nodeSelector: {peira.tech/pool: experiments}
+  tolerations:
+    - {key: peira.tech/experiments, operator: Equal, value: "true", effect: NoSchedule}
+
+clickhouse:
+  deploy: false                  # own StatefulSet, see clickhouse.yaml
+  host: clickhouse               # Service `clickhouse` in the same namespace
+  httpPort: 8123
+  nativePort: 9000
+  database: default
+  auth:
+    username: default
+    existingSecret: langfuse-clickhouse-auth
+    existingSecretKey: password
+  migration:
+    ssl: false
+    autoMigrate: true
+  cluster:
+    enabled: false               # -> CLICKHOUSE_CLUSTER_ENABLED=false
+
+s3:
+  deploy: true
+  bucket: langfuse
+  auth:
+    rootUser: langfuse
+    existingSecret: langfuse-s3-creds
+    rootUserSecretKey: accessKey
+    rootPasswordSecretKey: secretKey
+  allInOne:
+    enabled: true
+    s3:
+      enabled: true
+      enableAuth: true
+      existingConfigSecret: langfuse-s3-creds
+      createBuckets:
+        - name: langfuse
+    data:
+      type: persistentVolumeClaim
+      size: 30Gi
+      storageClass: managed-csi
+      accessModes: [ReadWriteOnce]
+    resources:
+      requests: {cpu: 250m, memory: 512Mi}
+      limits: {cpu: "1", memory: 1Gi}
+    podAnnotations: {karpenter.sh/do-not-disrupt: "true"}
+    # SeaweedFS takes these as multi-line strings.
+    nodeSelector: |
+      peira.tech/pool: experiments
+    tolerations: |
+      - {key: peira.tech/experiments, operator: Equal, value: "true", effect: NoSchedule}
